@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ------------------------------------------------------------------
+   Palette « salle de projection » — valeurs RGB pour Tailwind.
+   Contrastes vérifiés AA (texte secondaire inclus) dans les deux modes.
+------------------------------------------------------------------- */
+:root,
+[data-theme='dark'] {
+  --bg: 11 11 12;        /* #0B0B0C noir projection */
+  --surface: 21 21 23;   /* #151517 */
+  --line: 42 42 46;      /* #2A2A2E */
+  --fg: 237 233 227;     /* #EDE9E3 blanc pellicule */
+  --muted: 156 151 143;  /* #9C978F */
+  --accent: 226 164 90;  /* #E2A45A tungstène */
+  color-scheme: dark;
+}
+[data-theme='light'] {
+  --bg: 243 240 234;     /* #F3F0EA papier */
+  --surface: 233 229 221;
+  --line: 214 208 198;
+  --fg: 21 21 21;
+  --muted: 102 97 89;    /* #666159 */
+  --accent: 154 90 28;   /* #9A5A1C */
+  color-scheme: light;
+}
+
+@layer base {
+  html { @apply bg-bg text-fg antialiased; scroll-behavior: smooth; }
+  body { @apply bg-bg font-sans text-[15px] leading-relaxed; }
+  ::selection { background: rgb(var(--accent) / 0.35); }
+  :focus-visible { outline: 2px solid rgb(var(--accent)); outline-offset: 3px; border-radius: 2px; }
+  h1, h2, h3 { @apply font-serif font-normal leading-[0.95] tracking-tight; }
+}
+
+@layer components {
+  /* Petites capitales façon clap / fiche technique */
+  .label { @apply font-mono text-[12px] uppercase tracking-label text-muted; }
+  .container-site { @apply mx-auto w-full max-w-site px-4 sm:px-8 lg:px-12; }
+  .link-underline {
+    background: linear-gradient(currentColor, currentColor) 0 100% / 0 1px no-repeat;
+    transition: background-size 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .link-underline:hover, .link-underline:focus-visible { background-size: 100% 1px; }
+  /* Texte riche (description longue) */
+  .prose-cine { @apply max-w-[62ch] text-[17px] leading-[1.75] text-fg/90; }
+  .prose-cine p + p { @apply mt-5; }
+  .prose-cine a { @apply text-accent underline underline-offset-4; }
+  .prose-cine h2, .prose-cine h3 { @apply mb-3 mt-10 text-3xl; }
+  .prose-cine ul { @apply my-5 list-disc pl-5; }
+  .prose-cine strong { @apply font-medium text-fg; }
+}
+
+/* Grain argentique très léger sur tout le site */
+.grain::after {
+  content: '';
+  position: fixed;
+  inset: -50%;
+  z-index: 60;
+  pointer-events: none;
+  opacity: 0.045;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation: grain 1.2s steps(6) infinite;
+}
+@keyframes grain {
+  0%, 100% { transform: translate(0, 0); }
+  20% { transform: translate(-4%, 3%); }
+  40% { transform: translate(3%, -5%); }
+  60% { transform: translate(-6%, -2%); }
+  80% { transform: translate(5%, 4%); }
+}
+
+/* Apparition au scroll — seulement si JS actif (contenu visible sans JS / pour le SEO) */
+.js .reveal { opacity: 0; transform: translateY(24px); transition: opacity 1s cubic-bezier(0.22, 1, 0.36, 1), transform 1s cubic-bezier(0.22, 1, 0.36, 1); transition-delay: var(--delay, 0ms); }
+.js .reveal.is-visible { opacity: 1; transform: none; }
+
+/* Ouverture letterbox du hero */
+.letterbox::before, .letterbox::after {
+  content: ''; position: absolute; left: 0; right: 0; height: 50%; z-index: 2;
+  background: rgb(11 11 12); transition: transform 1.6s cubic-bezier(0.77, 0, 0.18, 1) 0.15s;
+}
+.letterbox::before { top: 0; }
+.letterbox::after { bottom: 0; }
+.letterbox.is-open::before { transform: translateY(-88%); }
+.letterbox.is-open::after { transform: translateY(88%); }
+@media (min-width: 768px) {
+  .letterbox.is-open::before { transform: translateY(-82%); }
+  .letterbox.is-open::after { transform: translateY(82%); }
+}
+
+/* Transition douce entre les pages */
+.page-enter { animation: page-in 0.7s cubic-bezier(0.22, 1, 0.36, 1) both; }
+@keyframes page-in { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+
+/* Zoom lent façon Ken Burns sur les héros */
+.kenburns { animation: kenburns 22s ease-out both; }
+@keyframes kenburns { from { transform: scale(1.08); } to { transform: scale(1); } }
+
+/* Respect de prefers-reduced-motion : on coupe tout mouvement */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+  .js .reveal { opacity: 1; transform: none; }
+  .grain::after { animation: none; }
+}
+
+/* Icône du bouton de thème : soleil en mode sombre, lune en mode clair */
+[data-theme='dark'] .theme-icon-moon, [data-theme='light'] .theme-icon-sun { display: none; }

@@ -1,0 +1,32 @@
+{
+  "titre": "Affiches",
+  "credit": "",
+  "categorie": "motion-design",
+  "type": "scolaire",
+  "date": "",
+  "roles": [
+    "Photoshop"
+  ],
+  "resume": "affiches",
+  "description": "affiches",
+  "couverture": "/src/content/uploads/motion-design/10-affiches.png",
+  "galerie": [
+    {
+      "image": "/src/content/uploads/motion-design/10-affiches.png",
+      "legende": ""
+    },
+    {
+      "image": "/src/content/uploads/motion-design/11-affiches.png",
+      "legende": ""
+    },
+    {
+      "image": "/src/content/uploads/motion-design/12-affiches.png",
+      "legende": ""
+    }
+  ],
+  "videos": [],
+  "liens": [],
+  "extrait": "",
+  "mis_en_avant": false,
+  "ordre": 4
+}

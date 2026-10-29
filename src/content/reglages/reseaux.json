@@ -1,0 +1,24 @@
+{
+  "reseaux": [
+    {
+      "nom": "LinkedIn",
+      "url": "https://www.linkedin.com/in/eva-masson-3a75152b3/",
+      "icone": "linkedin"
+    },
+    {
+      "nom": "Instagram",
+      "url": "https://www.instagram.com/evastre_prod/",
+      "icone": "instagram"
+    },
+    {
+      "nom": "Facebook",
+      "url": "https://www.facebook.com/eva.masson.96/",
+      "icone": "facebook"
+    },
+    {
+      "nom": "Email",
+      "url": "mailto:evastre.prod@gmail.com",
+      "icone": "email"
+    }
+  ]
+}

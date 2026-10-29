@@ -1,0 +1,28 @@
+{
+  "titre": "Portrait de la jeune fille en feu",
+  "credit": "",
+  "categorie": "bande-annonce",
+  "type": "scolaire",
+  "date": "",
+  "roles": [
+    "Montage",
+    "Sound design"
+  ],
+  "resume": "",
+  "description": "",
+  "couverture": "/src/content/uploads/videos/bande-annonce-portrait-jeune-fille-en-feu.jpg",
+  "galerie": [],
+  "videos": [
+    {
+      "url": "https://www-ccv.adobe.io/v1/player/ccv/DHEzv492VCZ/embed?bgcolor=%23191919&lazyLoading=true&api_key=BehancePro2View",
+      "titre": "",
+      "miniature": "/src/content/uploads/videos/bande-annonce-portrait-jeune-fille-en-feu.jpg",
+      "format": "16:9",
+      "duree": "02:13"
+    }
+  ],
+  "liens": [],
+  "extrait": "",
+  "mis_en_avant": false,
+  "ordre": 1
+}

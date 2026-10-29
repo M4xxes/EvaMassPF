@@ -1,0 +1,31 @@
+{
+  "titre": "Tempo",
+  "credit": "Eva Masson",
+  "categorie": "courts-metrages",
+  "type": "scolaire",
+  "date": "",
+  "roles": [
+    "Productrice",
+    "Réalisatrice",
+    "Opératrice caméra",
+    "Cheffe électricienne",
+    "Régisseuse"
+  ],
+  "resume": "Une nuit, Yvon est réveillé par un bruit étrange dans son appartement. Ce qui semblait n’être qu’un simple moment d’insomnie se transforme en descente angoissante dans un espace où le temps, la réalité et le reflet se déforment. Entre le tic-tac obsédant d’un métronome et un reflet qui prend vie, Yvon bascule peu à peu dans un autre monde, celui de son double.",
+  "description": "Une nuit, Yvon est réveillé par un bruit étrange dans son appartement. Ce qui semblait n’être qu’un simple moment d’insomnie se transforme en descente angoissante dans un espace où le temps, la réalité et le reflet se déforment. Entre le tic-tac obsédant d’un métronome et un reflet qui prend vie, Yvon bascule peu à peu dans un autre monde, celui de son double.",
+  "couverture": "/src/content/uploads/courts-metrages/tempo.png",
+  "galerie": [],
+  "videos": [
+    {
+      "url": "https://www.youtube.com/watch?v=Se1VeHF5sBQ",
+      "titre": "",
+      "miniature": "/src/content/uploads/videos/tempo.jpg",
+      "format": "16:9",
+      "duree": "02:25"
+    }
+  ],
+  "liens": [],
+  "extrait": "",
+  "mis_en_avant": true,
+  "ordre": 2
+}

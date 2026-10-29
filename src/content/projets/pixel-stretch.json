@@ -1,0 +1,32 @@
+{
+  "titre": "Pixel stretch",
+  "credit": "",
+  "categorie": "motion-design",
+  "type": "scolaire",
+  "date": "",
+  "roles": [
+    "Photoshop"
+  ],
+  "resume": "pixel stretch trend sur photoshop",
+  "description": "pixel stretch trend sur photoshop",
+  "couverture": "/src/content/uploads/motion-design/01-pixel-stretch.png",
+  "galerie": [
+    {
+      "image": "/src/content/uploads/motion-design/01-pixel-stretch.png",
+      "legende": ""
+    },
+    {
+      "image": "/src/content/uploads/motion-design/02-pixel-stretch.png",
+      "legende": ""
+    },
+    {
+      "image": "/src/content/uploads/motion-design/03-pixel-stretch.png",
+      "legende": ""
+    }
+  ],
+  "videos": [],
+  "liens": [],
+  "extrait": "",
+  "mis_en_avant": false,
+  "ordre": 2
+}

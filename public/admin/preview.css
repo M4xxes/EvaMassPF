@@ -1,0 +1,34 @@
+/* Styles de l'aperçu CMS — reprennent la direction artistique du site */
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@300..600&family=Geist+Mono&family=Instrument+Serif:ital@0;1&display=swap');
+html, body { background: #0b0b0c; color: #ede9e3; font: 15px/1.7 Geist, system-ui, sans-serif; margin: 0; }
+.wrap { padding: 48px 32px 80px; max-width: 1100px; margin: 0 auto; }
+h1, h2 { font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; line-height: .95; letter-spacing: -.01em; margin: 0 0 12px; }
+h1 { font-size: clamp(48px, 8vw, 96px); }
+h2 { font-size: 40px; }
+.label { font: 11px 'Geist Mono', monospace; text-transform: uppercase; letter-spacing: .14em; color: #9c978f; margin: 0 0 12px; }
+.muted { color: #9c978f; }
+.todo { border: 1px dashed #e2a45a; color: #e2a45a; padding: 10px 14px; font-size: 13px; margin: 16px 0; }
+.media { position: relative; margin: 32px 0; aspect-ratio: 16/9; background: #151517; overflow: hidden; }
+.media.vertical { aspect-ratio: 9/16; max-width: 360px; }
+.media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.play { position: absolute; inset: 0; margin: auto; width: 72px; height: 72px; border-radius: 50%; border: 1px solid rgba(255,255,255,.5); display: grid; place-items: center; background: rgba(0,0,0,.35); }
+.empty { width: 100%; height: 100%; min-height: 200px; display: grid; place-items: center; color: #9c978f; border: 1px dashed #2a2a2e; font-size: 13px; }
+.fiche { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); border-top: 1px solid #2a2a2e; margin: 0 0 32px; }
+.fiche div { padding: 16px 16px 16px 0; }
+.fiche dt { font: 11px 'Geist Mono', monospace; text-transform: uppercase; letter-spacing: .14em; color: #9c978f; }
+.fiche dd { margin: 6px 0 0; }
+.prose { max-width: 62ch; font-size: 17px; line-height: 1.75; }
+.prose a { color: #e2a45a; }
+.galerie { columns: 3 220px; column-gap: 12px; margin-top: 40px; }
+.galerie figure { margin: 0 0 12px; break-inside: avoid; }
+.galerie img { width: 100%; display: block; }
+.liens { list-style: none; padding: 0; border-top: 1px solid #2a2a2e; margin-top: 32px; }
+.liens li { padding: 14px 0; border-bottom: 1px solid #2a2a2e; }
+.note { color: #e2a45a; margin-top: 32px; }
+.card { position: relative; aspect-ratio: 4/3; max-width: 480px; overflow: hidden; background: #151517; }
+.card img { width: 100%; height: 100%; object-fit: cover; }
+.card-txt { position: absolute; left: 0; right: 0; bottom: 0; padding: 24px; background: linear-gradient(transparent, rgba(0,0,0,.8)); }
+.apropos { display: grid; grid-template-columns: 2fr 3fr; gap: 48px; align-items: start; }
+.apropos img, .apropos .empty { width: 100%; aspect-ratio: 4/5; object-fit: cover; }
+.bio { font-family: 'Instrument Serif', serif; font-size: 32px; line-height: 1.15; margin-top: 32px; }
+.timeline { border-left: 1px solid #2a2a2e; padding-left: 32px; }

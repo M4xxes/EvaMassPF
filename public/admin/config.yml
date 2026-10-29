@@ -1,0 +1,369 @@
+# =====================================================================
+#  Decap CMS — espace d'administration d'Eva (accessible sur /admin)
+#  Tout le contenu est enregistré en JSON dans src/content/ ; chaque
+#  publication crée un commit sur GitHub → Netlify redéploie le site.
+# =====================================================================
+
+backend:
+  name: github
+  repo: TODO_PROPRIETAIRE/TODO_DEPOT   # ← à remplacer, ex. "M4xxes/eva-masson-portfolio" (voir README)
+  branch: main
+  commit_messages:
+    create: "Ajout : {{collection}} « {{slug}} »"
+    update: "Modification : {{collection}} « {{slug}} »"
+    delete: "Suppression : {{collection}} « {{slug}} »"
+    uploadMedia: "Ajout du média {{path}}"
+    deleteMedia: "Suppression du média {{path}}"
+
+# En local : `npm run cms` dans un terminal puis http://localhost:5173/admin/
+local_backend: true
+
+# Brouillons : « Enregistrer » sans publier, puis « Publier » quand c'est prêt.
+publish_mode: editorial_workflow
+
+locale: fr
+
+# Les images envoyées depuis le CMS sont rangées ici puis optimisées au build
+media_folder: src/content/uploads
+public_folder: /src/content/uploads
+
+collections:
+  # ===================================================================
+  - name: projets
+    label: Projets
+    label_singular: Projet
+    description: >
+      Courts-métrages, clips, bandes annonces, pubs, interviews, motion design…
+      Un projet apparaît automatiquement dans sa catégorie, avec sa propre page.
+    folder: src/content/projets
+    format: json
+    extension: json
+    create: true
+    slug: "{{slug}}"
+    identifier_field: titre
+    summary: "{{titre}}  ·  {{categorie}}"
+    sortable_fields: [titre, categorie, ordre, date]
+    view_groups:
+      - { label: Catégorie, field: categorie }
+      - { label: Type, field: type }
+    view_filters:
+      - { label: Mis en avant sur l'accueil, field: mis_en_avant, pattern: true }
+    fields:
+      - { label: Titre, name: titre, widget: string, hint: "Obligatoire. Sert aussi à créer l'adresse de la page." }
+      - label: Crédit (sous le titre)
+        name: credit
+        widget: string
+        required: false
+        hint: "Facultatif — ex. le nom du réalisateur ou de l'artiste."
+      - label: Catégorie
+        name: categorie
+        widget: relation
+        collection: categories
+        value_field: "{{slug}}"
+        search_fields: [nom]
+        display_fields: [nom]
+        hint: Obligatoire. Pour créer une nouvelle catégorie, utilisez la collection « Catégories ».
+      - label: Type
+        name: type
+        widget: select
+        default: scolaire
+        options:
+          - { label: Scolaire, value: scolaire }
+          - { label: Professionnel, value: professionnel }
+          - { label: Personnel, value: personnel }
+        hint: Les projets professionnels et personnels apparaissent aussi sur la page « Pro / Perso ».
+      - label: Date
+        name: date
+        widget: datetime
+        format: YYYY-MM-DD
+        date_format: DD/MM/YYYY
+        time_format: false
+        required: false
+        hint: Facultatif — seule l'année est affichée sur le site.
+      - label: Rôle(s) d'Eva
+        name: roles
+        widget: relation
+        collection: roles
+        value_field: nom
+        search_fields: [nom]
+        display_fields: [nom]
+        multiple: true
+        required: false
+        hint: Plusieurs choix possibles. Pour un nouveau rôle, utilisez la collection « Rôles ».
+      - label: Description courte
+        name: resume
+        widget: text
+        required: false
+        hint: Une ou deux phrases (partage sur les réseaux, référencement Google).
+      - label: Description longue
+        name: description
+        widget: markdown
+        required: false
+        buttons: [bold, italic, link, heading-two, heading-three, bulleted-list, numbered-list, quote]
+        editor_components: []
+        hint: Texte affiché sur la page du projet (pitch, contexte, festival…).
+      - label: Image de couverture
+        name: couverture
+        widget: image
+        choose_url: false
+        hint: Obligatoire. Affiche, photogramme… (JPG ou PNG ; elle sera compressée automatiquement).
+      - label: Galerie d'images
+        name: galerie
+        label_singular: image
+        widget: list
+        required: false
+        collapsed: true
+        summary: "{{fields.legende}}"
+        fields:
+          - { label: Image, name: image, widget: image, choose_url: false }
+          - { label: Légende, name: legende, widget: string, required: false }
+      - label: Vidéos
+        name: videos
+        label_singular: vidéo
+        widget: list
+        required: false
+        summary: "{{fields.url}}"
+        hint: Collez le lien YouTube ou Vimeo. La vidéo ne se charge qu'au clic (site plus rapide).
+        fields:
+          - label: Lien de la vidéo
+            name: url
+            widget: string
+            pattern: ['(youtube\.com|youtu\.be|vimeo\.com|adobe\.io)', "Le lien doit être une vidéo YouTube ou Vimeo."]
+          - { label: Titre de la vidéo, name: titre, widget: string, required: false, hint: "Facultatif — sinon le titre du projet est utilisé." }
+          - { label: Miniature, name: miniature, widget: image, required: false, choose_url: false, hint: "Facultatif — sinon l'image de couverture est utilisée." }
+          - label: Format
+            name: format
+            widget: select
+            default: "16:9"
+            options:
+              - { label: "Horizontal (16:9)", value: "16:9" }
+              - { label: "Vertical (9:16, type Reels / TikTok)", value: "9:16" }
+          - label: Durée
+            name: duree
+            widget: string
+            required: false
+            pattern: ['^\d{1,2}:\d{2}$', "Format attendu : minutes:secondes, ex. 02:25"]
+            hint: "Facultatif — ex. 02:25"
+      - label: Liens externes
+        name: liens
+        label_singular: lien
+        widget: list
+        required: false
+        summary: "{{fields.titre}}"
+        fields:
+          - { label: Texte du lien, name: titre, widget: string }
+          - label: Adresse (URL)
+            name: url
+            widget: string
+            pattern: ['^(https?://|mailto:)', "L'adresse doit commencer par https://"]
+      - label: Extrait vidéo au survol (MP4)
+        name: extrait
+        widget: file
+        required: false
+        choose_url: false
+        hint: "Facultatif — clip MP4 muet de quelques secondes (moins de 4 Mo), joué quand on survole la carte."
+      - label: Mettre en avant sur l'accueil
+        name: mis_en_avant
+        widget: boolean
+        default: false
+        required: false
+      - { label: Ordre d'affichage, name: ordre, widget: number, value_type: int, default: 10, required: false, hint: "Les plus petits nombres s'affichent en premier (1, 2, 3…)." }
+
+  # ===================================================================
+  - name: categories
+    label: Catégories
+    label_singular: Catégorie
+    description: Les catégories de projets (Courts-métrages, Clip…). Chacune a sa page automatiquement.
+    folder: src/content/categories
+    format: json
+    extension: json
+    create: true
+    slug: "{{slug}}"
+    identifier_field: nom
+    summary: "{{nom}}  ·  {{rubrique}}"
+    sortable_fields: [nom, ordre]
+    fields:
+      - { label: Nom, name: nom, widget: string }
+      - label: Rubrique
+        name: rubrique
+        widget: select
+        default: scolaire
+        options:
+          - { label: Projets scolaires, value: scolaire }
+          - { label: Projets professionnels / personnels, value: professionnel }
+      - { label: Rôles affichés sur la carte, name: roles_affiches, widget: string, required: false, hint: "ex. Montage / Sound design" }
+      - { label: Description, name: description, widget: text, required: false }
+      - { label: Image de couverture, name: couverture, widget: image, required: false, choose_url: false }
+      - { label: Ordre d'affichage, name: ordre, widget: number, value_type: int, default: 10, required: false, hint: "Les plus petits nombres s'affichent en premier (1, 2, 3…)." }
+
+  # ===================================================================
+  - name: roles
+    label: Rôles
+    label_singular: Rôle
+    description: Liste des rôles proposés dans les projets (Réalisatrice, Montage…).
+    folder: src/content/roles
+    format: json
+    extension: json
+    create: true
+    slug: "{{slug}}"
+    identifier_field: nom
+    sortable_fields: [nom]
+    fields:
+      - { label: Nom du rôle, name: nom, widget: string }
+
+  # ===================================================================
+  - name: experiences
+    label: Expérience professionnelle
+    label_singular: Expérience
+    description: La frise « Expérience » (la page apparaît dans le menu dès la première expérience).
+    folder: src/content/experiences
+    format: json
+    extension: json
+    create: true
+    slug: "{{slug}}"
+    identifier_field: poste
+    summary: "{{poste}} — {{structure}}"
+    sortable_fields: [debut, poste]
+    fields:
+      - { label: Poste, name: poste, widget: string }
+      - { label: Structure, name: structure, widget: string }
+      - { label: Début, name: debut, widget: datetime, format: YYYY-MM-DD, date_format: MM/YYYY, time_format: false }
+      - { label: Fin, name: fin, widget: datetime, format: YYYY-MM-DD, date_format: MM/YYYY, time_format: false, required: false }
+      - { label: Toujours en poste, name: en_cours, widget: boolean, default: false, required: false }
+      - { label: Description, name: description, widget: markdown, required: false, buttons: [bold, italic, link, bulleted-list] , editor_components: [] }
+      - label: Lien
+        name: lien
+        widget: string
+        required: false
+        pattern: ['^https?://', "L'adresse doit commencer par https://"]
+
+  # ===================================================================
+  - name: reglages
+    label: Réglages du site
+    editor: { preview: false }
+    files:
+      - name: a-propos
+        label: À propos
+        file: src/content/reglages/a-propos.json
+        editor: { preview: true }
+        fields:
+          - { label: Titre, name: titre, widget: string }
+          - { label: Photo d'Eva, name: photo, widget: image, required: false, choose_url: false }
+          - { label: Description de la photo (accessibilité), name: photo_alt, widget: string, required: false }
+          - { label: Bio, name: bio, widget: text }
+          - { label: Note interne (non affichée), name: _todo, widget: hidden, required: false }
+
+      - name: reseaux
+        label: Réseaux sociaux
+        file: src/content/reglages/reseaux.json
+        fields:
+          - label: Réseaux
+            name: reseaux
+            label_singular: réseau
+            widget: list
+            summary: "{{fields.nom}}"
+            fields:
+              - { label: Nom, name: nom, widget: string }
+              - label: Adresse
+                name: url
+                widget: string
+                pattern: ['^(https?://|mailto:)', "Commence par https:// (ou mailto: pour un email)"]
+                hint: "Pour un email : mailto:adresse@exemple.com"
+              - label: Icône
+                name: icone
+                widget: select
+                options:
+                  - { label: LinkedIn, value: linkedin }
+                  - { label: Instagram, value: instagram }
+                  - { label: Facebook, value: facebook }
+                  - { label: YouTube, value: youtube }
+                  - { label: Email, value: email }
+                  - { label: Site web (globe), value: site }
+
+      - name: pro
+        label: Page « Pro / Perso »
+        file: src/content/reglages/pro.json
+        fields:
+          - { label: Titre, name: titre, widget: string }
+          - { label: Introduction, name: intro, widget: text, required: false }
+          - label: Autres sites
+            name: liens
+            label_singular: site
+            widget: list
+            summary: "{{fields.titre}}"
+            fields:
+              - { label: Nom, name: titre, widget: string }
+              - { label: Description, name: description, widget: string, required: false }
+              - { label: Adresse, name: url, widget: string, pattern: ['^https?://', "L'adresse doit commencer par https://"] }
+
+      - name: site
+        label: Accueil et informations générales
+        file: src/content/reglages/site.json
+        fields:
+          - { label: Nom, name: nom, widget: string }
+          - { label: Sous-titre, name: sous_titre, widget: string }
+          - { label: Image de fond de l'accueil, name: image_hero, widget: image, choose_url: false }
+          - { label: Description de l'image de fond (accessibilité), name: image_hero_alt, widget: string, required: false }
+          - label: Vidéo de fond de l'accueil (MP4)
+            name: video_hero
+            widget: file
+            required: false
+            choose_url: false
+            hint: "Facultatif — boucle MP4 muette, courte et légère (moins de 8 Mo). Remplace l'image si elle est renseignée."
+          - { label: Lien du site photo (menu « Photographie »), name: lien_photographie, widget: string, required: false }
+          - { label: Email de contact, name: email_contact, widget: string, required: false }
+          - { label: Description pour Google et les réseaux, name: description_seo, widget: text }
+          - { label: Adresse du site (ex. https://evamasson.fr), name: url_site, widget: string, required: false, hint: "Facultatif sur Netlify (détectée automatiquement)." }
+          - label: Textes de l'interface
+            name: textes
+            widget: object
+            collapsed: true
+            hint: Libellés du menu, boutons et titres de sections.
+            fields:
+              - { label: "Menu — Accueil", name: nav_accueil, widget: string }
+              - { label: "Menu — Projets scolaires", name: nav_scolaires, widget: string }
+              - { label: "Menu — Pro / Perso", name: nav_pro, widget: string }
+              - { label: "Menu — Photographie", name: nav_photo, widget: string }
+              - { label: "Menu — Expérience", name: nav_experience, widget: string }
+              - { label: "Menu — À propos", name: nav_apropos, widget: string }
+              - { label: "Menu — Contact", name: nav_contact, widget: string }
+              - { label: "Titre — Sélection (accueil)", name: titre_selection, widget: string }
+              - { label: "Titre — Projets scolaires", name: titre_categories, widget: string }
+              - { label: "Introduction — Projets scolaires", name: intro_scolaires, widget: text, required: false }
+              - { label: "Titre — Expérience", name: titre_experience, widget: string }
+              - { label: "Titre — Contact", name: titre_contact, widget: string }
+              - { label: "Introduction — Contact", name: intro_contact, widget: text, required: false }
+              - { label: "Bouton — Voir le projet", name: voir_projet, widget: string }
+              - { label: "Bouton — Tous les projets", name: voir_tout, widget: string }
+              - { label: "Bouton — Voir la catégorie", name: voir_categorie, widget: string }
+              - { label: "Mot « projets » (pluriel)", name: projets, widget: string }
+              - { label: "Mot « projet » (singulier)", name: projet, widget: string }
+              - { label: "Bouton — Lire la vidéo", name: lire_video, widget: string }
+              - { label: "Retour", name: retour, widget: string }
+              - { label: "Précédent", name: precedent, widget: string }
+              - { label: "Suivant", name: suivant, widget: string }
+              - { label: "Galerie", name: galerie, widget: string }
+              - { label: "Liens", name: liens, widget: string }
+              - { label: "Fiche — Rôle", name: roles, widget: string }
+              - { label: "Fiche — Catégorie", name: categorie, widget: string }
+              - { label: "Fiche — Année", name: annee, widget: string }
+              - { label: "Fiche — Durée", name: duree, widget: string }
+              - { label: "Fiche — Format", name: format, widget: string }
+              - { label: "Fiche — Crédit", name: credit, widget: string }
+              - { label: "Aucun projet", name: aucun_projet, widget: string }
+              - { label: "Aucune expérience", name: aucune_experience, widget: string }
+              - { label: "Expérience en cours", name: en_cours, widget: string }
+              - { label: "Titre — Autres sites", name: sites, widget: string }
+              - { label: "Défiler (accueil)", name: faire_defiler, widget: string }
+              - { label: "Page introuvable — titre", name: introuvable_titre, widget: string }
+              - { label: "Page introuvable — texte", name: introuvable_texte, widget: string }
+              - { label: "Accessibilité — Aller au contenu", name: aller_contenu, widget: string }
+              - { label: "Accessibilité — Menu", name: menu, widget: string }
+              - { label: "Accessibilité — Fermer", name: fermer, widget: string }
+              - { label: "Accessibilité — Changer de thème", name: theme, widget: string }
+              - { label: "Accessibilité — Image précédente", name: image_precedente, widget: string }
+              - { label: "Accessibilité — Image suivante", name: image_suivante, widget: string }
+              - { label: "Accessibilité — Nouvel onglet", name: nouvel_onglet, widget: string }
+              - { label: "Type — Scolaire", name: type_scolaire, widget: string }
+              - { label: "Type — Professionnel", name: type_professionnel, widget: string }
+              - { label: "Type — Personnel", name: type_personnel, widget: string }

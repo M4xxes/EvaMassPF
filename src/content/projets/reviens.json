@@ -1,0 +1,28 @@
+{
+  "titre": "Reviens",
+  "credit": "Eva Masson",
+  "categorie": "courts-metrages",
+  "type": "scolaire",
+  "date": "",
+  "roles": [
+    "Réalisatrice",
+    "Scénariste"
+  ],
+  "resume": "Un court métrage sélectionner au concours “Halloween Creator Festival” - 2025",
+  "description": "Un court métrage sélectionner au concours “Halloween Creator Festival” - 2025\n\nÀ la fin d’un podcast innocent sur les rêves, les deux podcasteurs bascule lorsque le studio devient un rêve lucide. Persuadé d’être piégé dans le rêve de Clémence, Maxime cherche frénétiquement à s’échapper. Mais au moment du réveil, la vérité éclate : c’est son rêve à lui… et Clémence y est resté enfermée.",
+  "couverture": "/src/content/uploads/courts-metrages/reviens.png",
+  "galerie": [],
+  "videos": [
+    {
+      "url": "https://www.youtube.com/watch?v=oaYaeomZZpE",
+      "titre": "",
+      "miniature": "/src/content/uploads/videos/reviens.jpg",
+      "format": "16:9",
+      "duree": "03:00"
+    }
+  ],
+  "liens": [],
+  "extrait": "",
+  "mis_en_avant": true,
+  "ordre": 3
+}

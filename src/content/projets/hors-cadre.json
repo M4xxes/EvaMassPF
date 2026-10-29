@@ -1,0 +1,44 @@
+{
+  "titre": "Hors Cadre",
+  "credit": "",
+  "categorie": "motion-design",
+  "type": "scolaire",
+  "date": "",
+  "roles": [
+    "Photoshop"
+  ],
+  "resume": "Projet fictif - HORS CADRE",
+  "description": "Projet fictif - HORS CADRE",
+  "couverture": "/src/content/uploads/motion-design/04-hors-cadre.png",
+  "galerie": [
+    {
+      "image": "/src/content/uploads/motion-design/04-hors-cadre.png",
+      "legende": ""
+    },
+    {
+      "image": "/src/content/uploads/motion-design/05-hors-cadre.png",
+      "legende": ""
+    },
+    {
+      "image": "/src/content/uploads/motion-design/06-hors-cadre.png",
+      "legende": ""
+    },
+    {
+      "image": "/src/content/uploads/motion-design/07-hors-cadre.png",
+      "legende": ""
+    },
+    {
+      "image": "/src/content/uploads/motion-design/08-hors-cadre.png",
+      "legende": ""
+    },
+    {
+      "image": "/src/content/uploads/motion-design/09-hors-cadre.png",
+      "legende": ""
+    }
+  ],
+  "videos": [],
+  "liens": [],
+  "extrait": "",
+  "mis_en_avant": true,
+  "ordre": 3
+}

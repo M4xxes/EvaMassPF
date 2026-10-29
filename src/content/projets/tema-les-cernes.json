@@ -1,0 +1,27 @@
+{
+  "titre": "Tema les cernes",
+  "credit": "Fuji — by Bianca Studio",
+  "categorie": "clip",
+  "type": "scolaire",
+  "date": "",
+  "roles": [
+    "Assistante réalisatrice"
+  ],
+  "resume": "TODO: aucune description sur le site d'origine (titre et crédit repris de l'image de couverture)",
+  "description": "",
+  "couverture": "/src/content/uploads/categories/clip.png",
+  "galerie": [],
+  "videos": [
+    {
+      "url": "https://www-ccv.adobe.io/v1/player/ccv/8cSIx7XASth/embed?bgcolor=%23191919&lazyLoading=true&api_key=BehancePro2View",
+      "titre": "",
+      "miniature": "/src/content/uploads/videos/clip.jpg",
+      "format": "16:9",
+      "duree": "02:28"
+    }
+  ],
+  "liens": [],
+  "extrait": "",
+  "mis_en_avant": false,
+  "ordre": 1
+}

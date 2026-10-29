@@ -1,0 +1,29 @@
+{
+  "titre": "Ce que la nuit n'a pas su prendre",
+  "credit": "Vassil Desplanques",
+  "categorie": "courts-metrages",
+  "type": "scolaire",
+  "date": "",
+  "roles": [
+    "Productrice",
+    "Scénariste",
+    "Assistante réalisatrice"
+  ],
+  "resume": "TODO: pitch vide sur le site d'origine",
+  "description": "",
+  "couverture": "/src/content/uploads/accueil/hero-ce-que-la-nuit-n-a-pas-su-prendre.jpg",
+  "galerie": [],
+  "videos": [
+    {
+      "url": "https://www.youtube.com/watch?v=1ufNIh-aZC8",
+      "titre": "",
+      "miniature": "/src/content/uploads/videos/ce-que-la-nuit-n-a-pas-su-prendre.jpg",
+      "format": "16:9",
+      "duree": "08:31"
+    }
+  ],
+  "liens": [],
+  "extrait": "",
+  "mis_en_avant": true,
+  "ordre": 1
+}

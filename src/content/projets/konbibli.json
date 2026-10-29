@@ -1,0 +1,30 @@
+{
+  "titre": "Konbibli",
+  "credit": "",
+  "categorie": "interviews-reportage",
+  "type": "scolaire",
+  "date": "",
+  "roles": [
+    "Co-réalisatrice",
+    "Assistante réalisatrice",
+    "Opératrice son",
+    "Maquilleuse"
+  ],
+  "resume": "Transposition du concept de Fast & Curious dans l’univers du livre grâce à une libraire indépendante, interrogée à travers une série de choix rapides liés à la littérature, à son métier et à sa vision du monde du livre mettant ainsi en lumière son expertise, ses goûts et sa sensibilité.",
+  "description": "Transposition du concept de Fast & Curious dans l’univers du livre grâce à une libraire indépendante, interrogée à travers une série de choix rapides liés à la littérature, à son métier et à sa vision du monde du livre mettant ainsi en lumière son expertise, ses goûts et sa sensibilité.",
+  "couverture": "/src/content/uploads/videos/interview-konbibli.jpg",
+  "galerie": [],
+  "videos": [
+    {
+      "url": "https://www-ccv.adobe.io/v1/player/ccv/-ZMGrwKsdtp/embed?bgcolor=%23191919&lazyLoading=true&api_key=BehancePro2View",
+      "titre": "",
+      "miniature": "/src/content/uploads/videos/interview-konbibli.jpg",
+      "format": "9:16",
+      "duree": "01:44"
+    }
+  ],
+  "liens": [],
+  "extrait": "",
+  "mis_en_avant": true,
+  "ordre": 1
+}

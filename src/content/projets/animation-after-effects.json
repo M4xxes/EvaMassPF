@@ -1,0 +1,27 @@
+{
+  "titre": "Animation After Effects",
+  "credit": "",
+  "categorie": "motion-design",
+  "type": "scolaire",
+  "date": "",
+  "roles": [
+    "After Effects"
+  ],
+  "resume": "Réalisation dune courte animation a partir d'un fichier photoshop fourni, dans le cadre d'un court sur after effect permettant d'apprendre les bases de celui ci",
+  "description": "Réalisation dune courte animation a partir d'un fichier photoshop fourni, dans le cadre d'un court sur after effect permettant d'apprendre les bases de celui ci",
+  "couverture": "/src/content/uploads/videos/motion-after-effects.jpg",
+  "galerie": [],
+  "videos": [
+    {
+      "url": "https://www-ccv.adobe.io/v1/player/ccv/3vGvQmHjJ2W/embed?bgcolor=%23191919&lazyLoading=true&api_key=BehancePro2View",
+      "titre": "",
+      "miniature": "/src/content/uploads/videos/motion-after-effects.jpg",
+      "format": "16:9",
+      "duree": "00:30"
+    }
+  ],
+  "liens": [],
+  "extrait": "",
+  "mis_en_avant": false,
+  "ordre": 1
+}

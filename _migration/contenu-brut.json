@@ -1,0 +1,131 @@
+{
+ "bande-annonce": [
+  {
+   "t": "text",
+   "v": "PORTRAIT DE LA JEUNE FILLE EN FEU"
+  },
+  {
+   "t": "video",
+   "v": "https://www-ccv.adobe.io/v1/player/ccv/DHEzv492VCZ/embed?bgcolor=%23191919&lazyLoading=true&api_key=BehancePro2View"
+  }
+ ],
+ "clip": [
+  {
+   "t": "video",
+   "v": "https://www-ccv.adobe.io/v1/player/ccv/8cSIx7XASth/embed?bgcolor=%23191919&lazyLoading=true&api_key=BehancePro2View"
+  }
+ ],
+ "courts-metrages": [
+  {
+   "t": "video",
+   "v": "https://youtube.com/1ufNIh-aZC8"
+  },
+  {
+   "t": "text",
+   "v": "CE QUE LA NUIT N'A PAS SU PRENDRE - VASSIL DESPLANQUES\nROLE : Productrice / Scénariste / Assistante Réalisatrice\nPITCH :"
+  },
+  {
+   "t": "img",
+   "v": "https://cdn.myportfolio.com/d45092bd-3631-4220-90a0-1bad782b95aa/dfad45ab-c247-458e-97a3-5866aabf1366.png?h=c63c33864bab6613c2911905b71e5cd8"
+  },
+  {
+   "t": "video",
+   "v": "https://youtube.com/Se1VeHF5sBQ"
+  },
+  {
+   "t": "img",
+   "v": "https://cdn.myportfolio.com/d45092bd-3631-4220-90a0-1bad782b95aa/f2608d04-2f11-4381-b40e-27913a57cd8e.png?h=2a9f72d4653787ac088318d7f5fcea28"
+  },
+  {
+   "t": "text",
+   "v": "TEMPO - EVA MASSON\nROLE : Productrice / Réalisatrice / Opératrice Caméra / Cheffe Électricienne / Régisseuse\nPITCH : Une nuit, Yvon est réveillé par un bruit étrange dans son appartement. Ce qui semblait n’être qu’un simple moment d’insomnie se transforme en descente angoissante dans un espace où le temps, la réalité et le reflet se déforment. Entre le tic-tac obsédant d’un métronome et un reflet qui prend vie, Yvon bascule peu à peu dans un autre monde, celui de son double."
+  },
+  {
+   "t": "img",
+   "v": "https://cdn.myportfolio.com/d45092bd-3631-4220-90a0-1bad782b95aa/4aa0310d-71c6-43db-a374-f81ee390a1b4.png?h=f87cfd51208360e0dbf384a17fe229ab"
+  },
+  {
+   "t": "video",
+   "v": "https://www.youtube.com/embed/oaYaeomZZpE"
+  },
+  {
+   "t": "text",
+   "v": "REVIENS - EVA MASSON\nROLE : RÉALISATRICE / SCÉNARISTE\nUn court métrage sélectionner au concours “Halloween Creator Festival” - 2025\nÀ la fin d’un podcast innocent sur les rêves, les deux podcasteurs bascule lorsque le studio devient un rêve lucide. Persuadé d’être piégé dans le rêve de Clémence, Maxime cherche frénétiquement à s’échapper. Mais au moment du réveil, la vérité éclate : c’est son rêve à lui… et Clémence y est resté enfermée."
+  },
+  {
+   "t": "img",
+   "v": "https://cdn.myportfolio.com/d45092bd-3631-4220-90a0-1bad782b95aa/09ba0ee5-1ade-4501-a37f-e9b0a93df685.JPG?h=588b070be4c81bfc8d1762252c6e340d"
+  },
+  {
+   "t": "text",
+   "v": "LE COUP DE LA LIBERTÉ - ROMAIN CHETAIL\nROLE : Scénariste / Assistante réalisatrice"
+  }
+ ],
+ "publicite-packshots": [
+  {
+   "t": "video",
+   "v": "https://www-ccv.adobe.io/v1/player/ccv/6ZGiMIQim_Y/embed?bgcolor=%23191919&lazyLoading=true&api_key=BehancePro2View"
+  },
+  {
+   "t": "text",
+   "v": "premier exercice de packshot pour le mâle élixir de jean Paul Gaultier"
+  }
+ ],
+ "interview": [
+  {
+   "t": "text",
+   "v": "INTERVIEW"
+  },
+  {
+   "t": "text",
+   "v": "KONBIBLI\nTransposition du concept de Fast & Curious dans l’univers du livre grâce à une libraire indépendante, interrogée à travers une série de choix rapides liés à la littérature, à son métier et à sa vision du monde du livre mettant ainsi en lumière son expertise, ses goûts et sa sensibilité.\nRôle : Co-Réalisatrice / Assistante réalisatrice / Opératrice son / Maquilleuse"
+  },
+  {
+   "t": "video",
+   "v": "https://www-ccv.adobe.io/v1/player/ccv/-ZMGrwKsdtp/embed?bgcolor=%23191919&lazyLoading=true&api_key=BehancePro2View"
+  },
+  {
+   "t": "video",
+   "v": "https://www-ccv.adobe.io/v1/player/ccv/He_R4S7GPNU/embed?bgcolor=%23191919&lazyLoading=true&api_key=BehancePro2View"
+  },
+  {
+   "t": "text",
+   "v": "KONBIGLISSE\nInterview d’un joueur professionnel de hockey sur glace à travers le format FastLife. L’objectif est de retracer son parcours personnel et sportif : ses débuts, ses sacrifices, ses réussites et sa vision du sport de haut niveau.\nRole : Co-Réalisatrice / Assistante réalisatrice / Opératrice son / Maquilleuse"
+  },
+  {
+   "t": "text",
+   "v": "REPORTAGE"
+  }
+ ],
+ "motion-design": [
+  {
+   "t": "text",
+   "v": "AFTER EFFECT"
+  },
+  {
+   "t": "text",
+   "v": "Réalisation dune courte animation a partir d'un fichier photoshop fourni, dans le cadre d'un court sur after effect permettant d'apprendre les bases de celui ci"
+  },
+  {
+   "t": "video",
+   "v": "https://www-ccv.adobe.io/v1/player/ccv/3vGvQmHjJ2W/embed?bgcolor=%23191919&lazyLoading=true&api_key=BehancePro2View"
+  },
+  {
+   "t": "text",
+   "v": "PHOTOSHOP"
+  },
+  {
+   "t": "text",
+   "v": "pixel stretch trend sur photoshop"
+  },
+  {
+   "t": "text",
+   "v": "Projet fictif - HORS CADRE"
+  },
+  {
+   "t": "text",
+   "v": "affiches"
+  }
+ ],
+ "reportage": []
+}

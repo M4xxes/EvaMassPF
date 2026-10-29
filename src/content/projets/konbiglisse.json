@@ -1,0 +1,30 @@
+{
+  "titre": "Konbiglisse",
+  "credit": "",
+  "categorie": "interviews-reportage",
+  "type": "scolaire",
+  "date": "",
+  "roles": [
+    "Co-réalisatrice",
+    "Assistante réalisatrice",
+    "Opératrice son",
+    "Maquilleuse"
+  ],
+  "resume": "Interview d’un joueur professionnel de hockey sur glace à travers le format FastLife. L’objectif est de retracer son parcours personnel et sportif : ses débuts, ses sacrifices, ses réussites et sa vision du sport de haut niveau.",
+  "description": "Interview d’un joueur professionnel de hockey sur glace à travers le format FastLife. L’objectif est de retracer son parcours personnel et sportif : ses débuts, ses sacrifices, ses réussites et sa vision du sport de haut niveau.",
+  "couverture": "/src/content/uploads/videos/interview-konbiglisse.jpg",
+  "galerie": [],
+  "videos": [
+    {
+      "url": "https://www-ccv.adobe.io/v1/player/ccv/He_R4S7GPNU/embed?bgcolor=%23191919&lazyLoading=true&api_key=BehancePro2View",
+      "titre": "",
+      "miniature": "/src/content/uploads/videos/interview-konbiglisse.jpg",
+      "format": "9:16",
+      "duree": "02:00"
+    }
+  ],
+  "liens": [],
+  "extrait": "",
+  "mis_en_avant": false,
+  "ordre": 2
+}
