@@ -6,7 +6,13 @@
   "image_hero": "/src/content/uploads/accueil/hero-ce-que-la-nuit-n-a-pas-su-prendre.jpg",
   "image_hero_alt": "Plan du court-métrage « Ce que la nuit n'a pas su prendre »",
   "video_hero": "",
-  "selection_accueil": [],
+  "selection_accueil": [
+    "ce-que-la-nuit-n-a-pas-su-prendre",
+    "la-main-qui-nous-nourrit",
+    "packshot-le-male-elixir",
+    "tempo",
+    "portrait-de-la-jeune-fille-en-feu"
+  ],
   "lien_photographie": "https://evastre.netlify.app",
   "email_contact": "evastre.prod@gmail.com",
   "cv": "/src/content/uploads/cv/CV_MASSON_EVA_2026.pdf",

@@ -1,0 +1,29 @@
+{
+  "titre": "La main qui nous nourrit",
+  "credit": "Sélectionné au concours « Je filme le métier qui me plaît »",
+  "categorie": "interviews-reportage",
+  "type": "scolaire",
+  "date": "",
+  "roles": [
+    "Réalisatrice",
+    "Cadreuse",
+    "Régisseuse générale"
+  ],
+  "resume": "À travers ce projet, j’ai voulu montrer la réalité du métier d’éleveur : ses joies, ses moments de fierté, mais aussi ses difficultés et les aspects parfois plus durs du quotidien.",
+  "description": "**Reportage sélectionné au concours « Je filme le métier qui me plaît »**\n\nÀ travers ce projet, j’ai voulu montrer la réalité du métier d’éleveur : ses joies, ses moments de fierté, mais aussi ses difficultés et les aspects parfois plus durs du quotidien.",
+  "couverture": "/src/content/uploads/interviews-reportage/la-main-qui-nous-nourrit-eleveur.jpg",
+  "galerie": [],
+  "videos": [
+    {
+      "url": "https://www.youtube.com/watch?v=qrjqCLlL0Rw",
+      "titre": "",
+      "miniature": "/src/content/uploads/interviews-reportage/la-main-qui-nous-nourrit.jpg",
+      "format": "16:9",
+      "duree": "03:00"
+    }
+  ],
+  "liens": [],
+  "extrait": "",
+  "mis_en_avant": false,
+  "ordre": 3
+}
