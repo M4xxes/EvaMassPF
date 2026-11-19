@@ -1,0 +1,45 @@
+{
+  "titre": "SKINTIPS",
+  "credit": "",
+  "categorie": "stages",
+  "type": "professionnel",
+  "date": "2026-09-01",
+  "roles": [
+    "Photographie",
+    "Captation vidéo"
+  ],
+  "resume": "Captation photo et vidéo d’événements",
+  "description": "Captation photo et vidéo d’événements",
+  "couverture": "/src/content/uploads/stages/skintips/01.jpg",
+  "galerie": [
+    {
+      "image": "/src/content/uploads/stages/skintips/01.jpg",
+      "legende": ""
+    },
+    {
+      "image": "/src/content/uploads/stages/skintips/02.jpg",
+      "legende": ""
+    },
+    {
+      "image": "/src/content/uploads/stages/skintips/03.jpg",
+      "legende": ""
+    },
+    {
+      "image": "/src/content/uploads/stages/skintips/04.jpg",
+      "legende": ""
+    },
+    {
+      "image": "/src/content/uploads/stages/skintips/05.jpg",
+      "legende": ""
+    },
+    {
+      "image": "/src/content/uploads/stages/skintips/06.jpg",
+      "legende": ""
+    }
+  ],
+  "videos": [],
+  "liens": [],
+  "extrait": "",
+  "mis_en_avant": false,
+  "ordre": 2
+}

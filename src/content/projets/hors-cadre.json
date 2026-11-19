@@ -5,10 +5,11 @@
   "type": "scolaire",
   "date": "",
   "roles": [
-    "Photoshop"
+    "Direction artistique",
+    "Graphisme (Photoshop)"
   ],
-  "resume": "Projet fictif - HORS CADRE",
-  "description": "Projet fictif - HORS CADRE",
+  "resume": "Hors Cadre est un projet de création graphique fictif autour de la conception d’une identité visuelle complète pour un projet musical.",
+  "description": "Hors Cadre est un projet de création graphique fictif autour de la conception d’une identité visuelle complète pour un projet musical. À partir d’une photographie, j’ai développé une direction artistique inspirée de l’univers de la pochette d’album. Le projet ne s’arrête pas à la création de la pochette : j’ai imaginé son déploiement sur différents supports afin de construire un univers cohérent, avec pochette d’album, vinyle, visuel promotionnel et affiche.",
   "couverture": "/src/content/uploads/motion-design/04-hors-cadre.png",
   "galerie": [
     {

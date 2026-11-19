@@ -1,0 +1,686 @@
+{
+  "source": "https://evamassonc01e.myportfolio.com",
+  "extractedAt": "2026-11-19",
+  "categories": [
+    {
+      "id": "bande-annonce",
+      "label": "Bande annonce",
+      "group": "scolaire",
+      "tagline": "MONTAGE / SOUND DESIGN",
+      "sourceUrl": "https://evamassonc01e.myportfolio.com/bande-annonce"
+    },
+    {
+      "id": "clip",
+      "label": "Clip",
+      "group": "scolaire",
+      "tagline": "ASSISTANAT RÉALISATION",
+      "sourceUrl": "https://evamassonc01e.myportfolio.com/clip"
+    },
+    {
+      "id": "courts-metrages",
+      "label": "Courts-métrages",
+      "group": "scolaire",
+      "tagline": "SCENARISATION / RÉALISATION / ASSISTANAT RÉALISATION / CAPTATION",
+      "sourceUrl": "https://evamassonc01e.myportfolio.com/courts-metrages"
+    },
+    {
+      "id": "publicite-packshots",
+      "label": "Publicité / Packshots",
+      "group": "scolaire",
+      "tagline": "CAPTATION / MONTAGE VIDEO",
+      "sourceUrl": "https://evamassonc01e.myportfolio.com/publicite-packshots"
+    },
+    {
+      "id": "interview",
+      "label": "Interviews / reportage",
+      "group": "scolaire",
+      "tagline": "REALISATION / ASSISTANAT RÉALISATION",
+      "sourceUrl": "https://evamassonc01e.myportfolio.com/interview"
+    },
+    {
+      "id": "motion-design",
+      "label": "Motion Design / Graphisme",
+      "group": "scolaire",
+      "tagline": "AFTER EFFECT / PHOTOSHOP",
+      "sourceUrl": "https://evamassonc01e.myportfolio.com/motion-design"
+    },
+    {
+      "id": "stages",
+      "label": "stages",
+      "group": "pro",
+      "tagline": "",
+      "year": "2026",
+      "sourceUrl": "https://evamassonc01e.myportfolio.com/reportage"
+    },
+    {
+      "id": "photographie",
+      "label": "Photographie",
+      "group": "pro",
+      "tagline": "",
+      "year": "2026",
+      "sourceUrl": "https://evamassonc01e.myportfolio.com/photographie",
+      "note": "Page vide sur le site actuel"
+    }
+  ],
+  "projects": [
+    {
+      "id": "portrait-de-la-jeune-fille-en-feu",
+      "category": "bande-annonce",
+      "order": 1,
+      "title": "PORTRAIT DE LA JEUNE FILLE EN FEU",
+      "credits": null,
+      "pitch": null,
+      "roles": [
+        "Montage",
+        "Sound design"
+      ],
+      "awards": [],
+      "description": [
+        "Réalisation d’une bande-annonce autour du film Portrait de la jeune fille en feu, avec un travail axé sur le montage et le sound design. L’objectif était de sélectionner et d’assembler les images les plus pertinentes afin de retranscrire l’atmosphère du film tout en donnant à la bande-annonce son propre rythme et sa progression narrative.",
+        "Le travail sonore accompagne le montage afin de renforcer les émotions, les tensions et les changements de rythme. J’ai ainsi travaillé sur la sélection, le découpage et l’enchaînement des plans, mais également sur la construction de l’ambiance sonore."
+      ],
+      "videos": [
+        {
+          "provider": "adobe",
+          "id": "DHEzv492VCZ",
+          "embed": "https://www-ccv.adobe.io/v1/player/ccv/DHEzv492VCZ/embed?bgcolor=%23191919&lazyLoading=true&api_key=BehancePro2View"
+        }
+      ],
+      "links": [],
+      "images": {
+        "page": "bande-annonce",
+        "slots": []
+      },
+      "imageFiles": []
+    },
+    {
+      "id": "clip-assistanat-realisation",
+      "category": "clip",
+      "order": 1,
+      "title": "Clip",
+      "credits": null,
+      "pitch": null,
+      "roles": [
+        "Assistante réalisation"
+      ],
+      "awards": [],
+      "description": [
+        "Sur ce projet de clip musical, j’ai occupé le poste d’assistante réalisation et pris en charge une grande partie de la préparation et de la coordination du tournage.",
+        "J’ai notamment assuré la recherche et la sélection des lieux de tournage, ainsi que la conception et la préparation de l’ensemble du dossier de production : dépouillement, plan de travail, board d’assistanat et feuilles de service. J’ai également participé à la constitution et à la coordination des équipes technique et artistique, en assurant la circulation des informations nécessaires au bon déroulement du tournage.",
+        "La préparation comprenait également la gestion des autorisations de tournage et des autorisations liées aux équipes, ainsi que la réservation et la coordination du matériel audiovisuel nécessaire au projet."
+      ],
+      "videos": [
+        {
+          "provider": "adobe",
+          "id": "8cSIx7XASth",
+          "embed": "https://www-ccv.adobe.io/v1/player/ccv/8cSIx7XASth/embed?bgcolor=%23191919&lazyLoading=true&api_key=BehancePro2View"
+        }
+      ],
+      "links": [],
+      "images": {
+        "page": "clip",
+        "slots": []
+      },
+      "todo": "Pas de titre de clip ni d'artiste sur le site : à demander à Eva",
+      "imageFiles": []
+    },
+    {
+      "id": "ce-que-la-nuit-n-a-pas-su-prendre",
+      "category": "courts-metrages",
+      "order": 1,
+      "title": "CE QUE LA NUIT N'A PAS SU PRENDRE",
+      "credits": "VASSIL DESPLANQUES",
+      "pitch": "Une jeune femme atteinte d’une leucémie vie les derniers jour de sa vie en réalisant des rêves d’enfant avec son meilleur amis ignorant sa condition.",
+      "roles": [
+        "Productrice",
+        "Scénariste",
+        "Assistante Réalisatrice"
+      ],
+      "awards": [],
+      "description": [
+        "Sur ce court-métrage, j’ai occupé un rôle central dans la production et la préparation du projet, de son écriture jusqu’à l’organisation du tournage.",
+        "J’ai d’abord pris en charge la recherche de financements, notamment à travers la mise en place et la gestion d’une campagne de dons permettant de réunir les ressources nécessaires à la réalisation du film. J’ai également écrit le scénario, en travaillant sur la construction de l’histoire, des personnages et de la mise en scène.",
+        "En parallèle, j’ai assuré l’ensemble de la préparation de production et de l’organisation du tournage : dépouillement du scénario, élaboration du plan de travail, création du board d’assistanat, gestion des droits à l’image et des autorisations liées aux lieux de tournage, préparation des feuilles de service, ainsi que la constitution et la coordination des équipes technique et artistique."
+      ],
+      "videos": [
+        {
+          "provider": "youtube",
+          "id": "1ufNIh-aZC8",
+          "url": "https://www.youtube.com/watch?v=1ufNIh-aZC8",
+          "thumbnail": "media/courts-metrages/ce-que-la-nuit-n-a-pas-su-prendre/thumb-youtube-1ufNIh-aZC8.jpg"
+        }
+      ],
+      "links": [],
+      "images": {
+        "page": "courts-metrages",
+        "slots": []
+      },
+      "imageFiles": []
+    },
+    {
+      "id": "tempo",
+      "category": "courts-metrages",
+      "order": 2,
+      "title": "TEMPO",
+      "credits": "EVA MASSON",
+      "pitch": "Une nuit, Yvon est réveillé par un bruit étrange dans son appartement. Ce qui semblait n’être qu’un simple moment d’insomnie se transforme en descente angoissante dans un espace où le temps, la réalité et le reflet se déforment. Entre le tic-tac obsédant d’un métronome et un reflet qui prend vie, Yvon bascule peu à peu dans un autre monde, celui de son double.",
+      "roles": [
+        "Productrice",
+        "Scénariste",
+        "Réalisatrice",
+        "Opératrice Caméra",
+        "Cheffe Électricienne",
+        "Régisseuse"
+      ],
+      "awards": [],
+      "description": [
+        "Sur ce projet, j’ai occupé plusieurs postes, à la fois artistiques et techniques. En tant que réalisatrice, j’ai travaillé sur la mise en scène et la direction du projet. J’ai également assuré la production et l’organisation du tournage, tout en étant opératrice caméra et cheffe électricienne. Ce projet m’a permis de prendre en charge un film de manière particulièrement polyvalente, en passant de la conception à la réalisation concrète et en intervenant directement sur plusieurs aspects du tournage."
+      ],
+      "videos": [
+        {
+          "provider": "youtube",
+          "id": "Se1VeHF5sBQ",
+          "url": "https://www.youtube.com/watch?v=Se1VeHF5sBQ",
+          "thumbnail": "media/courts-metrages/tempo/thumb-youtube-Se1VeHF5sBQ.jpg"
+        }
+      ],
+      "links": [],
+      "images": {
+        "page": "courts-metrages",
+        "slots": [
+          1
+        ]
+      },
+      "imageFiles": [
+        "media/courts-metrages/tempo/01.png"
+      ]
+    },
+    {
+      "id": "reviens",
+      "category": "courts-metrages",
+      "order": 3,
+      "title": "REVIENS",
+      "credits": "EVA MASSON",
+      "pitch": "À la fin d’un podcast innocent sur les rêves, les deux podcasteurs bascule lorsque le studio devient un rêve lucide. Persuadé d’être piégé dans le rêve de Clémence, Maxime cherche frénétiquement à s’échapper. Mais au moment du réveil, la vérité éclate : c’est son rêve à lui… et Clémence y est resté enfermée.",
+      "roles": [
+        "Réalisatrice",
+        "Scénariste"
+      ],
+      "awards": [
+        "Sélection officielle — Halloween Creators Festival 2025 (financé par Mothaïba)"
+      ],
+      "subtitle": "Un court métrage sélectionner au concours “Halloween Creator Festival” - 2025",
+      "description": [
+        "Reviens est mon premier court-métrage, écrit et réalisé dans le cadre du Halloween Creators Festival 2025. Le film a été sélectionné officiellement au festival, ce qui a également permis au projet d’être financé par Mothaïba dans le cadre de cette sélection. Sur ce projet, j’ai assuré la scénarisation et la réalisation, de l’écriture du concept jusqu’à sa mise en scène. Ce premier court-métrage m’a permis de concrétiser une première vision personnelle du cinéma et d’expérimenter un univers mêlant réalité, rêve et perception, tout en travaillant la mise en scène et la construction d’un retournement final."
+      ],
+      "videos": [
+        {
+          "provider": "youtube",
+          "id": "oaYaeomZZpE",
+          "url": "https://www.youtube.com/watch?v=oaYaeomZZpE",
+          "title": "Reviens - Halloween Creators Festival 2025",
+          "channel": "Evasive Production",
+          "thumbnail": "media/courts-metrages/reviens/thumb-youtube-oaYaeomZZpE.jpg"
+        }
+      ],
+      "links": [],
+      "images": {
+        "page": "courts-metrages",
+        "slots": [
+          2
+        ]
+      },
+      "imageFiles": [
+        "media/courts-metrages/reviens/01.png"
+      ]
+    },
+    {
+      "id": "le-coup-de-la-liberte",
+      "category": "courts-metrages",
+      "order": 4,
+      "title": "LE COUP DE LA LIBERTÉ",
+      "credits": "ROMAIN CHETAIL",
+      "pitch": "Une femme victime de violence conjugale decide de ce faire justice elle meme avant que justice ne la rattrape.",
+      "roles": [
+        "Scénariste",
+        "Assistante réalisatrice"
+      ],
+      "awards": [],
+      "description": [
+        "Le Coup de la Liberté est un court-métrage réalisé dans le cadre d’un exercice de création en 48 heures, avec des contraintes précises imposées dès le lancement du projet. Ce format demandait de concevoir, préparer et réaliser le film dans un temps particulièrement court, tout en respectant les éléments imposés.",
+        "Sur ce projet, j’ai pris en charge la scénarisation, en développant une histoire adaptée aux contraintes du défi et au temps de production disponible.",
+        "J’ai également assuré l’ensemble de la préparation et de l’organisation du tournage : dépouillement du scénario, élaboration des plans de travail, création du board d’assistanat, gestion des droits à l’image et des autorisations liées aux lieux de tournage, préparation des feuilles de service ainsi que la gestion et la coordination des équipes technique et artistique."
+      ],
+      "videos": [],
+      "links": [],
+      "images": {
+        "page": "courts-metrages",
+        "slots": [
+          3
+        ]
+      },
+      "imageFiles": [
+        "media/courts-metrages/le-coup-de-la-liberte/01.jpg"
+      ]
+    },
+    {
+      "id": "packshot-male-elixir",
+      "category": "publicite-packshots",
+      "order": 1,
+      "title": "PACKSHOTS — Mâle Élixir, Jean Paul Gaultier",
+      "credits": null,
+      "pitch": null,
+      "roles": [
+        "Captation",
+        "Mise en scène",
+        "Cadrage",
+        "Montage"
+      ],
+      "awards": [],
+      "description": [
+        "Réalisation d’un premier exercice de packshot vidéo autour du parfum Le Mâle Élixir de Jean Paul Gaultier. L’objectif était de mettre en valeur le produit à travers une captation travaillée, en accordant une attention particulière aux reflets, à la lumière, aux matières et aux détails du flacon. J’ai travaillé la mise en scène et le cadrage afin de créer des images à la fois élégantes et immersives, puis réalisé le montage de la séquence pour construire un rendu publicitaire cohérent et rythmé."
+      ],
+      "videos": [
+        {
+          "provider": "adobe",
+          "id": "6ZGiMIQim_Y",
+          "embed": "https://www-ccv.adobe.io/v1/player/ccv/6ZGiMIQim_Y/embed?bgcolor=%23191919&lazyLoading=true&api_key=BehancePro2View"
+        }
+      ],
+      "links": [],
+      "images": {
+        "page": "publicite-packshots",
+        "slots": []
+      },
+      "imageFiles": []
+    },
+    {
+      "id": "packshot-monster-ultra-black",
+      "category": "publicite-packshots",
+      "order": 2,
+      "title": "PACKSHOTS — Monster Energy Ultra Black",
+      "credits": null,
+      "pitch": null,
+      "format": "vertical",
+      "roles": [
+        "Captation",
+        "Mise en scène",
+        "Cadrage",
+        "Lumière",
+        "Montage"
+      ],
+      "awards": [],
+      "description": [
+        "Réalisation d’un second exercice de packshot vidéo autour de la canette de Monster Energy Ultra Black, cette fois pensé au format vertical pour une diffusion sur les réseaux sociaux. L’objectif était de mettre en valeur le produit à travers une esthétique dynamique et impactante, en travaillant la mise en scène, le cadrage, les mouvements de caméra et la lumière afin de renforcer l’identité visuelle de la marque. J’ai ensuite réalisé le montage de la séquence, en adaptant le rythme et les différents plans aux codes des contenus publicitaires courts destinés aux plateformes sociales."
+      ],
+      "videos": [
+        {
+          "provider": "adobe",
+          "id": "FkDX4wWYoVH",
+          "embed": "https://www-ccv.adobe.io/v1/player/ccv/FkDX4wWYoVH/embed?bgcolor=%23191919&lazyLoading=true&api_key=BehancePro2View"
+        }
+      ],
+      "links": [],
+      "images": {
+        "page": "publicite-packshots",
+        "slots": []
+      },
+      "imageFiles": []
+    },
+    {
+      "id": "konbibli",
+      "category": "interview",
+      "order": 1,
+      "type": "INTERVIEW",
+      "title": "KONBIBLI",
+      "credits": null,
+      "pitch": null,
+      "roles": [
+        "Co-Réalisatrice",
+        "Assistante réalisatrice",
+        "Opératrice son",
+        "Maquilleuse"
+      ],
+      "awards": [],
+      "description": [
+        "Transposition du concept de Fast & Curious dans l’univers du livre grâce à une libraire indépendante, interrogée à travers une série de choix rapides liés à la littérature, à son métier et à sa vision du monde du livre mettant ainsi en lumière son expertise, ses goûts et sa sensibilité."
+      ],
+      "videos": [
+        {
+          "provider": "adobe",
+          "id": "-ZMGrwKsdtp",
+          "embed": "https://www-ccv.adobe.io/v1/player/ccv/-ZMGrwKsdtp/embed?bgcolor=%23191919&lazyLoading=true&api_key=BehancePro2View"
+        }
+      ],
+      "links": [],
+      "images": {
+        "page": "interview",
+        "slots": []
+      },
+      "imageFiles": []
+    },
+    {
+      "id": "konbiglisse",
+      "category": "interview",
+      "order": 2,
+      "type": "INTERVIEW",
+      "title": "KONBIGLISSE",
+      "credits": null,
+      "pitch": null,
+      "roles": [
+        "Co-Réalisatrice",
+        "Assistante réalisatrice",
+        "Opératrice son",
+        "Maquilleuse"
+      ],
+      "awards": [],
+      "description": [
+        "Interview d’un joueur professionnel de hockey sur glace à travers le format FastLife. L’objectif est de retracer son parcours personnel et sportif : ses débuts, ses sacrifices, ses réussites et sa vision du sport de haut niveau."
+      ],
+      "videos": [
+        {
+          "provider": "adobe",
+          "id": "He_R4S7GPNU",
+          "embed": "https://www-ccv.adobe.io/v1/player/ccv/He_R4S7GPNU/embed?bgcolor=%23191919&lazyLoading=true&api_key=BehancePro2View"
+        }
+      ],
+      "links": [],
+      "images": {
+        "page": "interview",
+        "slots": []
+      },
+      "todo": "Attribution de la vidéo déduite de l'ordre sur la page : à vérifier",
+      "imageFiles": []
+    },
+    {
+      "id": "reportage-je-filme-le-metier",
+      "category": "interview",
+      "order": 3,
+      "type": "REPORTAGE",
+      "title": "REPORTAGE",
+      "credits": null,
+      "pitch": null,
+      "roles": [
+        "Réalisatrice",
+        "Cadreuse",
+        "Régisseuse Général"
+      ],
+      "awards": [
+        "Sélectionné au concours « Je filme le métier qui me plaît »"
+      ],
+      "description": [
+        "Reportage sélectionner au concours \"je film le métier qui me plait\""
+      ],
+      "videos": [],
+      "links": [],
+      "images": {
+        "page": "interview",
+        "slots": []
+      },
+      "todo": "Pas de vidéo ni de titre : à demander à Eva",
+      "imageFiles": []
+    },
+    {
+      "id": "after-effect-initiation",
+      "category": "motion-design",
+      "order": 1,
+      "title": "AFTER EFFECT",
+      "credits": null,
+      "pitch": null,
+      "roles": [
+        "Motion design (After Effects)"
+      ],
+      "awards": [],
+      "description": [
+        "Réalisation d’une courte animation à partir d’un fichier Photoshop fourni, dans le cadre d’un exercice d’initiation à After Effects. Ce projet m’a permis de découvrir les bases du motion design et de mettre en mouvement différents éléments graphiques : déplacements, rotations..",
+        "L’objectif était de transformer une composition graphique statique en une courte séquence animée, tout en travaillant la fluidité des mouvements et la synchronisation entre les différents éléments."
+      ],
+      "videos": [
+        {
+          "provider": "adobe",
+          "id": "3vGvQmHjJ2W",
+          "embed": "https://www-ccv.adobe.io/v1/player/ccv/3vGvQmHjJ2W/embed?bgcolor=%23191919&lazyLoading=true&api_key=BehancePro2View"
+        }
+      ],
+      "links": [],
+      "images": {
+        "page": "motion-design",
+        "slots": []
+      },
+      "imageFiles": []
+    },
+    {
+      "id": "pixel-stretch",
+      "category": "motion-design",
+      "order": 2,
+      "section": "PHOTOSHOP",
+      "title": "PIXEL STRETCH",
+      "credits": null,
+      "pitch": null,
+      "roles": [
+        "Graphisme (Photoshop)"
+      ],
+      "awards": [],
+      "description": [
+        "Série réalisée autour de la tendance Pixel Stretch, consistant à étirer certaines zones de l’image afin de créer des déformations graphiques et des lignes dynamiques. J’ai travaillé à partir de photographies existantes en jouant sur la déformation, la répétition et l’intégration des éléments graphiques pour créer une composition cohérente."
+      ],
+      "videos": [],
+      "links": [],
+      "images": {
+        "page": "motion-design",
+        "slots": [
+          1,
+          2,
+          3
+        ]
+      },
+      "imageFiles": [
+        "media/motion-design/pixel-stretch/01.png",
+        "media/motion-design/pixel-stretch/02.png",
+        "media/motion-design/pixel-stretch/03.png"
+      ]
+    },
+    {
+      "id": "hors-cadre",
+      "category": "motion-design",
+      "order": 3,
+      "section": "PHOTOSHOP",
+      "title": "HORS CADRE — Projet fictif",
+      "credits": null,
+      "pitch": null,
+      "roles": [
+        "Direction artistique",
+        "Graphisme (Photoshop)"
+      ],
+      "awards": [],
+      "description": [
+        "Hors Cadre est un projet de création graphique fictif autour de la conception d’une identité visuelle complète pour un projet musical. À partir d’une photographie, j’ai développé une direction artistique inspirée de l’univers de la pochette d’album. Le projet ne s’arrête pas à la création de la pochette : j’ai imaginé son déploiement sur différents supports afin de construire un univers cohérent, avec pochette d’album, vinyle, visuel promotionnel et affiche."
+      ],
+      "videos": [],
+      "links": [],
+      "images": {
+        "page": "motion-design",
+        "slots": [
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ]
+      },
+      "imageFiles": [
+        "media/motion-design/hors-cadre/01.png",
+        "media/motion-design/hors-cadre/02.png",
+        "media/motion-design/hors-cadre/03.png",
+        "media/motion-design/hors-cadre/04.png",
+        "media/motion-design/hors-cadre/05.png",
+        "media/motion-design/hors-cadre/06.png"
+      ]
+    },
+    {
+      "id": "affiches",
+      "category": "motion-design",
+      "order": 4,
+      "section": "PHOTOSHOP",
+      "title": "AFFICHES",
+      "credits": null,
+      "pitch": null,
+      "roles": [
+        "Graphisme",
+        "Typographie"
+      ],
+      "awards": [],
+      "description": [
+        "Création d’une série d’affiches graphiques en travaillant principalement la typographie et la superposition. J’ai choisi une palette volontairement limitée au rouge, au bleu et au blanc afin de créer une identité visuelle forte et immédiatement reconnaissable. Le travail repose sur la confrontation entre les éléments typographiques et les illustrations de chats, avec des jeux de transparence, de superposition et de découpage pour créer une composition volontairement dense et dynamique."
+      ],
+      "videos": [],
+      "links": [],
+      "images": {
+        "page": "motion-design",
+        "slots": [
+          10,
+          11,
+          12
+        ]
+      },
+      "imageFiles": [
+        "media/motion-design/affiches/01.png",
+        "media/motion-design/affiches/02.png",
+        "media/motion-design/affiches/03.png"
+      ]
+    },
+    {
+      "id": "sido",
+      "category": "stages",
+      "order": 1,
+      "title": "SIDO",
+      "credits": null,
+      "pitch": null,
+      "period": "Septembre 2026",
+      "roles": [
+        "Captation vidéo",
+        "Montage"
+      ],
+      "awards": [],
+      "description": [
+        "Captation videos et montage de capsules videos a destination des réseaux sociaux tout au long de l'evenement"
+      ],
+      "videos": [],
+      "links": [
+        "https://www.linkedin.com/posts/sido-event_sido2026-iot-ia-activity-7506019236025339904-Ky1l",
+        "https://www.linkedin.com/posts/sido-event_ia-iot-robotique-activity-7505903200751849472-15iW"
+      ],
+      "images": {
+        "page": "reportage",
+        "slots": []
+      },
+      "imageFiles": []
+    },
+    {
+      "id": "skintips",
+      "category": "stages",
+      "order": 2,
+      "title": "SKINTIPS",
+      "credits": null,
+      "pitch": null,
+      "period": "Septembre 2026 - Actuel",
+      "roles": [
+        "Photographie",
+        "Captation vidéo"
+      ],
+      "awards": [],
+      "description": [
+        "Captations photos et videos d'evenements"
+      ],
+      "videos": [],
+      "links": [],
+      "images": {
+        "page": "reportage",
+        "slots": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "imageFiles": [
+        "media/stages/skintips/01.jpg",
+        "media/stages/skintips/02.jpg",
+        "media/stages/skintips/03.jpg",
+        "media/stages/skintips/04.jpg",
+        "media/stages/skintips/05.jpg",
+        "media/stages/skintips/06.jpg"
+      ]
+    }
+  ],
+  "pages": {
+    "work": {
+      "url": "https://evamassonc01e.myportfolio.com/work",
+      "images": 6,
+      "ogImage": "https://cdn.myportfolio.com/d45092bd-3631-4220-90a0-1bad782b95aa/e4590fa9-30d6-44b4-b644-f35b86f98473_rwc_24x138x407x318x407.jpeg?h=387d77423408205968eb79e4185713c4",
+      "ogLocal": "media/_pages/work/og-cover.jpg"
+    },
+    "bande-annonce": {
+      "url": "https://evamassonc01e.myportfolio.com/bande-annonce",
+      "images": 0,
+      "ogImage": "https://cdn.myportfolio.com/d45092bd-3631-4220-90a0-1bad782b95aa/e4590fa9-30d6-44b4-b644-f35b86f98473_rwc_24x138x407x318x407.jpeg?h=387d77423408205968eb79e4185713c4",
+      "ogLocal": "media/_pages/bande-annonce/og-cover.jpg"
+    },
+    "clip": {
+      "url": "https://evamassonc01e.myportfolio.com/clip",
+      "images": 0,
+      "ogImage": "https://cdn.myportfolio.com/d45092bd-3631-4220-90a0-1bad782b95aa/840d0cb7-c8b2-42e2-83d8-bb5f2a1379f9_rwc_522x0x1980x1548x1980.png?h=24b8278707fcaf392ad7dae104df0380",
+      "ogLocal": "media/_pages/clip/og-cover.png"
+    },
+    "courts-metrages": {
+      "url": "https://evamassonc01e.myportfolio.com/courts-metrages",
+      "images": 3,
+      "ogImage": "https://cdn.myportfolio.com/d45092bd-3631-4220-90a0-1bad782b95aa/e172af30-5afb-4a0e-b557-65d13a2f07ec_rwc_0x2140x2160x1688x2160.png?h=40f3682685b795d7479fe4f6929efd1b",
+      "ogLocal": "media/_pages/courts-metrages/og-cover.png"
+    },
+    "publicite-packshots": {
+      "url": "https://evamassonc01e.myportfolio.com/publicite-packshots",
+      "images": 0,
+      "ogImage": "https://cdn.myportfolio.com/d45092bd-3631-4220-90a0-1bad782b95aa/ebbf04f7-1ddf-4bfc-ba02-52f47ccfb632_rwc_0x354x1277x998x1277.png?h=203a6dd585bff948c36afdfc4c35cefb",
+      "ogLocal": "media/_pages/publicite-packshots/og-cover.png"
+    },
+    "interview": {
+      "url": "https://evamassonc01e.myportfolio.com/interview",
+      "images": 0,
+      "ogImage": "https://cdn.myportfolio.com/d45092bd-3631-4220-90a0-1bad782b95aa/d9e3a09b-b1bc-48d2-b70c-b104f9a15e56_rwc_0x458x998x780x998.png?h=df61bd6a31d41d2f40dfe35b9ba2c8d3",
+      "ogLocal": "media/_pages/interview/og-cover.png"
+    },
+    "motion-design": {
+      "url": "https://evamassonc01e.myportfolio.com/motion-design",
+      "images": 12,
+      "ogImage": "https://cdn.myportfolio.com/d45092bd-3631-4220-90a0-1bad782b95aa/357da0ea-05cf-40ff-a94f-39260b393466_rwc_0x153x1024x800x1024.png?h=58a79d1e3a6d6b222cef44e95ff6aea4",
+      "ogLocal": "media/_pages/motion-design/og-cover.png"
+    },
+    "projets-personnels": {
+      "url": "https://evamassonc01e.myportfolio.com/projets-personnels",
+      "images": 1,
+      "ogImage": "https://cdn.myportfolio.com/d45092bd-3631-4220-90a0-1bad782b95aa/ab6a5373-80e0-4ce4-9754-11971a269294_car_202x158.jpg?h=5a3d4540b4b82f6b04c176286f29691a",
+      "ogLocal": "media/_pages/projets-personnels/og-cover.jpg"
+    },
+    "reportage": {
+      "url": "https://evamassonc01e.myportfolio.com/reportage",
+      "images": 6,
+      "ogImage": "https://cdn.myportfolio.com/d45092bd-3631-4220-90a0-1bad782b95aa/ab6a5373-80e0-4ce4-9754-11971a269294_car_202x158.jpg?h=5a3d4540b4b82f6b04c176286f29691a",
+      "ogLocal": "media/_pages/reportage/og-cover.jpg"
+    },
+    "photographie": {
+      "url": "https://evamassonc01e.myportfolio.com/photographie",
+      "images": 0,
+      "ogImage": null
+    },
+    "mon-experience-professionnelle": {
+      "url": "https://evamassonc01e.myportfolio.com/mon-experience-professionnelle",
+      "images": 1,
+      "ogImage": "https://cdn.myportfolio.com/d45092bd-3631-4220-90a0-1bad782b95aa/340ab010-2f42-4dc0-bf49-a714a9d2ee48_rw_600.png?h=30d3d21ab25cb3de213e454882b2d2b2",
+      "ogLocal": "media/_pages/mon-experience-professionnelle/og-cover.png"
+    }
+  }
+}

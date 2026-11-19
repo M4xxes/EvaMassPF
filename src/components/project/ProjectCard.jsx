@@ -34,6 +34,12 @@ export default function ProjectCard({ projet, ratio = 'portrait', sizes, showCat
       onBlur={stop}
     >
       <div className={`relative overflow-hidden bg-surface ${ratios[ratio]}`}>
+        {!projet.couverture && (
+          // Pas encore de couverture : le titre en grand, façon carton de film
+          <span aria-hidden="true" className="absolute inset-0 grid place-items-center p-6 text-center font-serif text-[clamp(2.5rem,5vw,4.5rem)] leading-none text-muted transition duration-[1.4s] ease-cine group-hover:scale-[1.05] group-hover:text-fg">
+            {projet.titre}
+          </span>
+        )}
         <Picture
           src={projet.couverture}
           alt={`${projet.titre} — ${cat?.nom ?? ''}`}

@@ -6,10 +6,12 @@
   "date": "",
   "roles": [
     "Captation",
-    "Montage vidéo"
+    "Mise en scène",
+    "Cadrage",
+    "Montage"
   ],
-  "resume": "premier exercice de packshot pour le mâle élixir de jean Paul Gaultier",
-  "description": "premier exercice de packshot pour le mâle élixir de jean Paul Gaultier",
+  "resume": "Réalisation d’un premier exercice de packshot vidéo autour du parfum Le Mâle Élixir de Jean Paul Gaultier.",
+  "description": "Réalisation d’un premier exercice de packshot vidéo autour du parfum Le Mâle Élixir de Jean Paul Gaultier. L’objectif était de mettre en valeur le produit à travers une captation travaillée, en accordant une attention particulière aux reflets, à la lumière, aux matières et aux détails du flacon. J’ai travaillé la mise en scène et le cadrage afin de créer des images à la fois élégantes et immersives, puis réalisé le montage de la séquence pour construire un rendu publicitaire cohérent et rythmé.",
   "couverture": "/src/content/uploads/videos/packshot-male-elixir.jpg",
   "galerie": [],
   "videos": [

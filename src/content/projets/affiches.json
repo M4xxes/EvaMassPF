@@ -5,10 +5,11 @@
   "type": "scolaire",
   "date": "",
   "roles": [
-    "Photoshop"
+    "Graphisme",
+    "Typographie"
   ],
-  "resume": "affiches",
-  "description": "affiches",
+  "resume": "Création d’une série d’affiches graphiques en travaillant principalement la typographie et la superposition.",
+  "description": "Création d’une série d’affiches graphiques en travaillant principalement la typographie et la superposition. J’ai choisi une palette volontairement limitée au rouge, au bleu et au blanc afin de créer une identité visuelle forte et immédiatement reconnaissable. Le travail repose sur la confrontation entre les éléments typographiques et les illustrations de chats, avec des jeux de transparence, de superposition et de découpage pour créer une composition volontairement dense et dynamique.",
   "couverture": "/src/content/uploads/motion-design/10-affiches.png",
   "galerie": [
     {

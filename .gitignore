@@ -6,3 +6,6 @@ dist-ssr
 
 # Archive brute de l'import Adobe Portfolio (copiée dans src/content/uploads)
 _migration/images/
+
+# Médias téléchargés depuis Adobe Portfolio (188 Mo, à intégrer via src/content/uploads)
+eva-export/content/media/

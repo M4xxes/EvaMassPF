@@ -1,0 +1,134 @@
+{
+  "name": "Eva MASSON",
+  "bio": "Étudiante en audiovisuel et photographe indépendante, je me spécialise dans la production, la réalisation et le travail de l’image. Mon parcours est marqué par une volonté d’autonomie et par le développement de projets personnels et collectifs.",
+  "about": "Passionnée par le cinéma et tout ce qui gravite autour, je suis actuellement étudiante en audiovisuel à Ynov Campus Lyon. Je m’intéresse particulièrement à la préproduction et à la gestion de projet, avec un goût prononcé pour l’organisation, la préparation et la coordination nécessaires à la réalisation d’un projet. Curieuse et impliquée, j’aime participer à la création d’un projet dès ses premières idées jusqu’à sa concrétisation.",
+  "contact": {
+    "email": "evastre.prod@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/eva-masson-3a75152b3/",
+    "facebook": "https://www.facebook.com/eva.masson.96/",
+    "instagram": "https://www.instagram.com/evastre_prod/",
+    "photoSite": "https://evastrephotographie.myportfolio.com",
+    "youtubeChannel": "Evasive Production"
+  },
+  "menu": {
+    "scolaire": {
+      "label": "Projets scolaires",
+      "items": [
+        "bande-annonce",
+        "clip",
+        "courts-metrages",
+        "publicite-packshots",
+        "interview",
+        "motion-design"
+      ]
+    },
+    "pro": {
+      "label": "Projets professionnels",
+      "items": [
+        "stages",
+        "photographie"
+      ]
+    },
+    "extra": [
+      "Evastre Photographie",
+      "Mon expérience professionnelle"
+    ]
+  },
+  "cv": {
+    "_note": "Retranscrit depuis l'image du CV (page Mon expérience professionnelle). L'adresse, le téléphone et l'e-mail perso du CV ont été volontairement laissés de côté : demander à Eva ce qu'elle veut afficher.",
+    "experience": [
+      {
+        "title": "Stage - SKINTIPS",
+        "period": "Septembre 2026 - Actuel",
+        "details": [
+          "Photographie et captation d’événements"
+        ]
+      },
+      {
+        "title": "Stage - SIDO",
+        "period": "Septembre 2026",
+        "details": [
+          "Captation et montage de capsules vidéo promotionnelles de l’événement à destination des réseaux sociaux"
+        ]
+      },
+      {
+        "title": "Mission d’intérim - Plastique Industrie",
+        "period": "Juin 2025 - Août 2025 & Juin 2024 - Août 2024",
+        "details": [
+          "Montage et assemblage de pièces",
+          "Contrôle qualité, conditionnement, étiquetage",
+          "Complétude de documents de production"
+        ]
+      },
+      {
+        "title": "Immersion professionnelle - Librairie Lulu, Mornant",
+        "period": "Mars 2025 - Avril 2025",
+        "details": [
+          "Accueil clients, mise en rayon, conseil clients et gestion des stocks"
+        ]
+      },
+      {
+        "title": "Immersion professionnelle - Médiathèque L’Ouvre-Boîte, Orliénas",
+        "period": "Février 2025 - Mars 2025",
+        "details": [
+          "Participation à l’organisation d’activités culturelles et aide à l’accueil du public et à la gestion des emprunts/retours"
+        ]
+      },
+      {
+        "title": "Agent factotum - Clinique de l’Ouest Lyonnais",
+        "period": "Juin 2023 - Août 2023",
+        "details": [
+          "Entretien extérieur (nettoyage, désherbage, etc.), travaux de peinture, montage de mobilier et tâches de bureautique : classement de factures, mise à jour de documents Excel"
+        ]
+      }
+    ],
+    "volunteering": [
+      {
+        "title": "Animation d’ateliers - Médiathèque L’Ouvre-Boîte, Orliénas",
+        "details": [
+          "Organisation et animation d’un atelier de sensibilisation à la cybersécurité et au hacking"
+        ]
+      },
+      {
+        "title": "Community Manager - Compte TikTok de FlashBack FA",
+        "period": "Novembre 2024 - Mars 2025",
+        "details": [
+          "Création et gestion de contenu pour la promotion de FlashBack FA",
+          "Animation de la communauté et suivi des tendances TikTok"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "title": "Bachelor Audiovisuel",
+        "period": "2025 - Actuel",
+        "school": "Lyon YNOV Campus"
+      },
+      {
+        "title": "Licence Informatique - 1re année",
+        "period": "2022 - 2024",
+        "school": "Université Jean Monnet - Faculté des Sciences et Techniques (Saint-Étienne)"
+      },
+      {
+        "title": "Baccalauréat général 2022, mention assez bien",
+        "period": "2019 - 2022",
+        "school": "Lycée Champagnat - Saint-Symphorien-sur-Coise",
+        "details": "Spécialités : Mathématiques, Numérique et sciences informatiques"
+      }
+    ],
+    "skills": [
+      "Gestion de projet : audiovisuel et digital",
+      "Gestion et coordination d’équipe",
+      "Travail en équipe",
+      "Organisation d’événements",
+      "Animation : conduite d’ateliers culturels en médiathèque"
+    ],
+    "software": [
+      "DaVinci Resolve",
+      "Photoshop",
+      "Canva",
+      "Premiere Pro",
+      "After Effects"
+    ]
+  }
+}

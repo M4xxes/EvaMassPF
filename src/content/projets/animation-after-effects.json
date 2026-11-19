@@ -5,10 +5,10 @@
   "type": "scolaire",
   "date": "",
   "roles": [
-    "After Effects"
+    "Motion design (After Effects)"
   ],
-  "resume": "Réalisation dune courte animation a partir d'un fichier photoshop fourni, dans le cadre d'un court sur after effect permettant d'apprendre les bases de celui ci",
-  "description": "Réalisation dune courte animation a partir d'un fichier photoshop fourni, dans le cadre d'un court sur after effect permettant d'apprendre les bases de celui ci",
+  "resume": "Réalisation d’une courte animation à partir d’un fichier Photoshop fourni, dans le cadre d’un exercice d’initiation à After Effects.",
+  "description": "Réalisation d’une courte animation à partir d’un fichier Photoshop fourni, dans le cadre d’un exercice d’initiation à After Effects. Ce projet m’a permis de découvrir les bases du motion design et de mettre en mouvement différents éléments graphiques : déplacements, rotations…\n\nL’objectif était de transformer une composition graphique statique en une courte séquence animée, tout en travaillant la fluidité des mouvements et la synchronisation entre les différents éléments.",
   "couverture": "/src/content/uploads/videos/motion-after-effects.jpg",
   "galerie": [],
   "videos": [

@@ -45,11 +45,13 @@
   .link-underline:hover, .link-underline:focus-visible { background-size: 100% 1px; }
   /* Texte riche (description longue) */
   .prose-cine { @apply max-w-[62ch] text-[17px] leading-[1.75] text-fg/90; }
-  .prose-cine p + p { @apply mt-5; }
+  .prose-cine > * + * { @apply mt-5; }
   .prose-cine a { @apply text-accent underline underline-offset-4; }
   .prose-cine h2, .prose-cine h3 { @apply mb-3 mt-10 text-3xl; }
   .prose-cine ul { @apply my-5 list-disc pl-5; }
   .prose-cine strong { @apply font-medium text-fg; }
+  /* Pitch d'un film : citation en serif, filet d'accent */
+  .prose-cine blockquote { @apply my-8 border-l-2 border-accent pl-5 font-serif text-[1.35em] leading-snug text-fg; }
 }
 
 /* Grain argentique très léger sur tout le site */

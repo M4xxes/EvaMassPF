@@ -1,0 +1,31 @@
+{
+  "titre": "Monster Energy Ultra Black",
+  "credit": "",
+  "categorie": "publicite-packshots",
+  "type": "scolaire",
+  "date": "",
+  "roles": [
+    "Captation",
+    "Mise en scène",
+    "Cadrage",
+    "Lumière",
+    "Montage"
+  ],
+  "resume": "Réalisation d’un second exercice de packshot vidéo autour de la canette de Monster Energy Ultra Black, cette fois pensé au format vertical pour une diffusion sur les réseaux sociaux.",
+  "description": "Réalisation d’un second exercice de packshot vidéo autour de la canette de Monster Energy Ultra Black, cette fois pensé au format vertical pour une diffusion sur les réseaux sociaux. L’objectif était de mettre en valeur le produit à travers une esthétique dynamique et impactante, en travaillant la mise en scène, le cadrage, les mouvements de caméra et la lumière afin de renforcer l’identité visuelle de la marque. J’ai ensuite réalisé le montage de la séquence, en adaptant le rythme et les différents plans aux codes des contenus publicitaires courts destinés aux plateformes sociales.",
+  "couverture": "/src/content/uploads/videos/packshot-monster-ultra-black.jpg",
+  "galerie": [],
+  "videos": [
+    {
+      "url": "https://www-ccv.adobe.io/v1/player/ccv/FkDX4wWYoVH/embed?bgcolor=%23191919&lazyLoading=true&api_key=BehancePro2View",
+      "titre": "",
+      "miniature": "/src/content/uploads/videos/packshot-monster-ultra-black.jpg",
+      "format": "9:16",
+      "duree": "00:15"
+    }
+  ],
+  "liens": [],
+  "extrait": "",
+  "mis_en_avant": false,
+  "ordre": 2
+}

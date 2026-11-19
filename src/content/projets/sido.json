@@ -1,0 +1,29 @@
+{
+  "titre": "SIDO",
+  "credit": "",
+  "categorie": "stages",
+  "type": "professionnel",
+  "date": "2026-09-01",
+  "roles": [
+    "Captation vidéo",
+    "Montage"
+  ],
+  "resume": "Captation vidéo et montage de capsules vidéo à destination des réseaux sociaux tout au long de l’événement",
+  "description": "Captation vidéo et montage de capsules vidéo à destination des réseaux sociaux tout au long de l’événement",
+  "couverture": "",
+  "galerie": [],
+  "videos": [],
+  "liens": [
+    {
+      "titre": "Voir la publication LinkedIn",
+      "url": "https://www.linkedin.com/posts/sido-event_sido2026-iot-ia-activity-7506019236025339904-Ky1l"
+    },
+    {
+      "titre": "Voir une autre publication LinkedIn",
+      "url": "https://www.linkedin.com/posts/sido-event_ia-iot-robotique-activity-7505903200751849472-15iW"
+    }
+  ],
+  "extrait": "",
+  "mis_en_avant": false,
+  "ordre": 1
+}

@@ -12,8 +12,9 @@ import { t, pro, clean, projetsProPerso, categoriesDe } from '../lib/content.js'
  * - liens vers les autres sites (Evasive, Evastre Photographie…).
  */
 export default function Pro() {
-  const projets = projetsProPerso()
   const cats = categoriesDe('professionnel', { nonVides: true })
+  // Les projets rangés dans une catégorie pro (ex. Stages) sont déjà accessibles par sa carte
+  const projets = projetsProPerso().filter((p) => !cats.some((c) => c.slug === p.categorie))
   const liens = (pro.liens || []).filter((l) => clean(l.url))
 
   return (
