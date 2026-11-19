@@ -14,8 +14,8 @@ const pictures = import.meta.glob(
 /** @returns {{ sources: Record<string,string>, img: { src: string, w: number, h: number } } | null} */
 export const getPicture = (path) => (path ? pictures[path] || null : null)
 
-/** Fichiers non-image (vidéo mp4 d'extrait, etc.) : servis tels quels. */
-const files = import.meta.glob('/src/content/uploads/**/*.{mp4,webm,MP4,WEBM}', {
+/** Fichiers non-image (vidéo mp4 d'extrait, CV en PDF…) : servis tels quels. */
+const files = import.meta.glob('/src/content/uploads/**/*.{mp4,webm,pdf,MP4,WEBM,PDF}', {
   eager: true,
   import: 'default',
   query: '?url',

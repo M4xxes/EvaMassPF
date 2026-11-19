@@ -3,8 +3,8 @@
 Site portfolio d'Eva Masson (audiovisuel & photographie), avec un espace d'administration
 (`/admin`) qui lui permet d'ajouter, de modifier ou de supprimer ses projets sans toucher au code.
 
-- **Stack** : Vite 5 · React 18 · Tailwind CSS 3 · React Router 6
-- **CMS** : Decap CMS (git-based), connexion via GitHub, workflow brouillon / publication
+- **Stack** : Vite 7 · React 18 · Tailwind CSS 3 · React Router 7
+- **CMS** : Decap CMS (git-based), connexion par **code d'accès** (sans compte GitHub), workflow brouillon / publication
 - **Hébergement** : Netlify (déploiement automatique à chaque publication dans le CMS)
 - **Guide utilisateur (non technique)** : [GUIDE-EVA.md](GUIDE-EVA.md)
 
@@ -24,10 +24,10 @@ Site portfolio d'Eva Masson (audiovisuel & photographie), avec un espace d'admin
 
 ## 1. Installation et lancement en local
 
-Prérequis : **Node.js 20+**.
+Prérequis : **Node.js 20.19+** (exigé par Vite 7).
 
 ```bash
-npm install
+npm ci               # installe exactement les versions du package-lock.json
 npm run dev          # site sur http://localhost:5173
 ```
 
@@ -35,7 +35,7 @@ Pour utiliser le CMS en local (sans connexion GitHub, les fichiers sont modifié
 
 ```bash
 npm run dev          # terminal 1
-npm run cms          # terminal 2 : lance decap-server (port 8081)
+npm run cms          # terminal 2 : lance decap-server via npx (port 8081, non installé dans le projet)
 # puis ouvrir http://localhost:5173/admin/index.html → « Se connecter »
 ```
 
@@ -45,6 +45,12 @@ Build de production :
 npm run build        # → dist/
 npx serve dist       # pour tester le résultat
 ```
+
+> ⚠️ **Ne pas lancer `npm audit fix --force`** : il saute des versions majeures sans vérifier la
+> compatibilité (Vite 8, imagetools 7…) et casse le build. Les versions ont été choisies pour avoir
+> 0 vulnérabilité sans rupture : Vite 7, React Router 7, vite-imagetools 9 (Node 20) avec sharp 0.35
+> imposé via `overrides`. Pour une future montée de version, procéder paquet par paquet puis
+> relancer `npm run build`.
 
 > ⚠️ `vite preview` ne sert pas les pages pré-rendues des sous-dossiers (il renvoie l'accueil
 > pour `/projets`, ce qui provoque une erreur d'hydratation) : utiliser `npx serve dist`.
@@ -63,9 +69,10 @@ cache `node_modules/.cache/imagetools`.
 
 ```
 ├── public/
-│   ├── admin/                 ← CMS : index.html, config.yml (collections), preview.js/.css (aperçus)
+│   ├── admin/                 ← CMS : index.html (connexion par code), config.yml (collections), preview.js/.css (aperçus)
 │   └── favicon.svg
 ├── scripts/prerender.mjs      ← pré-rendu statique + sitemap
+├── netlify/functions/auth.mjs ← connexion à /admin par code d'accès (voir section 5)
 ├── src/
 │   ├── content/               ← TOUT le contenu (JSON écrit par le CMS)
 │   │   ├── projets/           ← un fichier par projet
@@ -77,7 +84,7 @@ cache `node_modules/.cache/imagetools`.
 │   ├── lib/
 │   │   ├── content.js         ← lecture du contenu (import.meta.glob), requêtes, URL
 │   │   ├── images.js          ← images AVIF/WebP/JPEG multi-tailles (vite-imagetools)
-│   │   ├── og.js              ← images Open Graph (pré-rendu uniquement)
+│   │   ├── og.js              ← images Open Graph (pré-rendu uniquement, copiées dans dist/assets par prerender.mjs)
 │   │   ├── seo.js / useSeo.js ← title / description par page
 │   ├── components/
 │   │   ├── layout/            ← Header (menu mobile), Footer, Layout (transitions de page)
@@ -100,10 +107,10 @@ cache `node_modules/.cache/imagetools`.
 | `/projets` | Projets scolaires (catégories de la rubrique « scolaire ») |
 | `/projets/:categorie` | Liste des projets d'une catégorie |
 | `/projets/:categorie/:slug` | Détail d'un projet |
-| `/projets-professionnels` | Projets pro / perso, catégories pro non vides, liens Evasive / Evastre |
+| `/projets-professionnels` | Projets pro / perso, catégories pro non vides (Stages, Audacieux…), lien Evastre Photographie |
 | `/experience` | Frise d'expériences (lien de menu masqué tant qu'il n'y en a aucune) |
 | `/a-propos`, `/contact` | À propos, contact |
-| `/photographie` | Redirection (Netlify) vers evamassonportfolio.netlify.app |
+| `/photographie` | Redirection (Netlify) vers evastre.netlify.app (site photo d'Eva) |
 
 Les anciennes URL Adobe Portfolio (`/work`, `/clip`, `/interview`…) sont redirigées en 301 vers
 les nouvelles pages (`netlify.toml`).
@@ -156,6 +163,12 @@ La configuration complète des formulaires est dans [`public/admin/config.yml`](
 - **Brouillons** : `publish_mode: editorial_workflow`. Un brouillon = une branche `cms/…` + une
   pull request sur GitHub ; « Publier » fusionne dans `main` → Netlify redéploie.
 - **Aperçu** : `public/admin/preview.js` (rendu proche du site, sans build).
+- **Sélection de l'accueil** : `reglages/site.json → selection_accueil` (liste ordonnée de slugs de
+  projets, 4 à 8). `projetsMisEnAvant()` la suit dans l'ordre et ignore les slugs supprimés ; si elle
+  est vide, retour à la case `mis_en_avant` des projets. Une fois la liste utilisée en production,
+  la case pourra être retirée du formulaire Projets.
+- **CV** : `reglages/site.json → cv` (PDF uploadé dans `uploads/` ou lien externe). `cvUrl()` renvoie
+  l'URL ; vide → entrée de menu et boutons (`components/ui/CvButton.jsx`) masqués.
 - **Slug de catégorie** : la valeur enregistrée dans un projet est le nom de fichier de la catégorie.
   Renommer une catégorie dans le CMS ne change pas son fichier : les projets restent rattachés.
   En revanche, **supprimer** une catégorie qui contient des projets les rend invisibles.
@@ -179,26 +192,44 @@ La configuration complète des formulaires est dans [`public/admin/config.yml`](
    projet avant de le publier. Pour économiser des minutes de build, on peut les désactiver dans
    *Site configuration → Build & deploy → Deploy Previews*.
 
-## 5. Authentification du CMS (GitHub OAuth)
+## 5. Connexion au CMS par code d'accès
 
-Netlify Identity / Git Gateway étant dépréciés, le CMS utilise le **backend GitHub** ; Netlify
-sert uniquement de relais OAuth.
+Eva se connecte à `/admin` avec un simple **code**, sans compte GitHub.
 
-1. **GitHub** → *Settings* → *Developer settings* → *OAuth Apps* → *New OAuth App* :
-   - *Homepage URL* : l'URL du site Netlify (ex. `https://eva-masson.netlify.app`)
-   - *Authorization callback URL* : `https://api.netlify.com/auth/done`
-   - Créer, puis générer un *Client secret*.
-2. **Netlify** → *Site configuration* → *Access & security* → *OAuth* →
-   *Install provider* → **GitHub** → coller le *Client ID* et le *Client secret*.
-3. Dans [`public/admin/config.yml`](public/admin/config.yml), remplacer
-   `repo: TODO_PROPRIETAIRE/TODO_DEPOT` par le vrai dépôt (ex. `M4xxes/eva-masson-portfolio`),
-   committer et pousser.
-4. **Donner l'accès à Eva** : elle crée un compte GitHub gratuit ; sur le dépôt →
-   *Settings* → *Collaborators* → *Add people* → son identifiant (droit *Write*).
-   Elle accepte l'invitation reçue par email.
-5. Eva se connecte sur `https://<site>/admin/` → « Se connecter avec GitHub ».
+**Fonctionnement** : Decap CMS enregistre le contenu dans le dépôt GitHub et a donc besoin d'un jeton
+GitHub. Au clic sur « Se connecter », il ouvre la fenêtre
+[`netlify/functions/auth.mjs`](netlify/functions/auth.mjs) (fonction Netlify). Celle-ci demande le
+code, le compare à `ADMIN_CODE` (comparaison à temps constant, 1,5 s d'attente après un échec), puis
+transmet `GITHUB_TOKEN` au CMS via le protocole `postMessage` de Decap, uniquement vers une page du
+même site. Le branchement est fait dans [`public/admin/index.html`](public/admin/index.html)
+(`CMS.init` avec `base_url` = le site et `auth_endpoint` = la fonction).
 
-Seules les personnes ayant un droit d'écriture sur le dépôt peuvent se connecter.
+**Mise en place (une seule fois)**
+
+1. **Créer le jeton GitHub** (compte propriétaire du dépôt) : *Settings* → *Developer settings* →
+   *Personal access tokens* → **Fine-grained tokens** → *Generate new token* :
+   - *Repository access* : **Only select repositories** → `M4xxes/EvaMassPF` ;
+   - *Permissions* (Repository) : **Contents** : *Read and write*,
+     **Pull requests** : *Read and write* (brouillons), **Issues** : *Read and write*
+     (étiquettes des brouillons), *Metadata* : *Read-only* (automatique) ;
+   - *Expiration* : la plus longue possible, et **noter la date** pour le renouveler.
+2. **Netlify** → *Site configuration* → *Environment variables* → ajouter :
+   - `GITHUB_TOKEN` = le jeton créé ci-dessus ;
+   - `ADMIN_CODE` = le code donné à Eva (**au moins 12 caractères**, ex. trois mots et un chiffre).
+   Cocher « Contains secret values ». Puis *Deploys* → *Trigger deploy* pour les prendre en compte.
+3. Donner le code à Eva (de vive voix ou par message privé, pas par email partagé).
+
+**Gestion au quotidien**
+
+- **Changer le code** : modifier `ADMIN_CODE` puis redéployer. Les sessions déjà ouvertes restent
+  actives jusqu'à la déconnexion ; pour couper tout accès immédiatement, régénérer aussi le jeton.
+- **Jeton expiré** (message d'erreur à la connexion) : en créer un nouveau, remplacer `GITHUB_TOKEN`,
+  redéployer.
+- Les modifications d'Eva apparaissent dans l'historique GitHub au nom du propriétaire du jeton.
+- **Sécurité** : le code donne les mêmes droits que le jeton (écriture sur ce seul dépôt). Après
+  connexion, le jeton est conservé dans le navigateur d'Eva jusqu'à « Déconnexion ».
+- En local, `npm run dev` + `npm run cms` contourne la connexion (fichiers modifiés sur le disque).
+  Pour tester la fenêtre de code en local : `npx netlify-cli dev` avec les deux variables définies.
 
 ## 6. Performances, SEO, accessibilité
 
@@ -228,18 +259,28 @@ si Eva remplace cette image, viser un fichier de bonne qualité mais pas démesu
 
 ## 7. Contenu manquant (TODO)
 
-Repéré lors de l'import du site Adobe Portfolio (`_migration/`), à compléter depuis le CMS :
+Suivi du cahier des charges d'octobre 2026, à compléter depuis le CMS :
 
-- **Photo d'Eva** pour la page À propos (aucune sur l'ancien site).
-- **Clip « Tema les cernes »** : pas de description (titre et crédit lus sur l'image de couverture).
-- **Ce que la nuit n'a pas su prendre** : pitch vide sur l'ancien site.
-- **Le coup de la liberté** : ni vidéo ni pitch.
-- **Stages** (catégorie pro) : page vide sur l'ancien site — masquée tant qu'elle n'a pas de projet.
-- **Expérience professionnelle** : page vide sur l'ancien site — masquée du menu tant qu'elle est vide.
-- **Interviews / Reportage** : l'ancien site affichait un titre « REPORTAGE » sans contenu.
-- **Dates** des projets : aucune sur l'ancien site.
-- **Vidéos hébergées chez Adobe** (bande annonce, clip, packshot, Konbibli, Konbiglisse, animation
-  After Effects) : elles dépendent de l'abonnement Adobe Portfolio. À remettre sur YouTube/Vimeo
-  puis à remplacer le lien dans le CMS, sinon elles disparaîtront si l'abonnement s'arrête.
+- **Photo d'Eva** pour À propos. (Le CV `uploads/cv/CV_MASSON_EVA_2026.pdf` est en ligne ; les 6 expériences
+  de la page Expérience en sont reprises telles quelles.)
+- **Sélection de l'accueil** : liste vide pour l'instant → l'accueil affiche encore les 5 projets
+  cochés « Mettre en avant ». À remplir avec 4 ou 8 projets.
+- **Interviews / Reportage** :
+  - REPORTAGE (« Je filme le métier qui me plaît ») : lien YouTube et titre définitif à fournir ;
+  - Les Voix de Lyon : créé, résumé à fournir ;
+  - Konbibli, Konbiglisse : vidéos encore sur le lecteur Adobe, texte de Konbiglisse à mettre à jour.
+- **Motion design / Graphisme** : nouveaux textes des 4 projets ; lien YouTube de l'animation
+  After Effects (le lien `MzucElHrcz8` fourni est celui des Voix de Lyon).
+- **Stages** : projets SIDO et SKINTIPS (couverture SIDO, 6 photos HD SKINTIPS avec accord des
+  personnes photographiées), description et couverture de la catégorie. Dates connues par le CV :
+  SIDO septembre 2026, SKINTIPS depuis septembre 2026.
+- **Audacieux** : catégorie créée (masquée tant qu'elle est vide) ; réalisations à mettre en ligne,
+  couverture, lien Instagram du festival (champ « Liens externes » d'un projet : les catégories
+  n'ont pas de champ lien).
+- **Photographie** : option A retenue par défaut (lien vers evastre.netlify.app) ; l'option B
+  (catégorie dédiée) reste à décider.
+- Anciennes lacunes toujours ouvertes : pitch de *Ce que la nuit n'a pas su prendre*, vidéo et pitch du
+  *Coup de la liberté*, description du clip, dates des projets, vidéos Adobe de la bande annonce,
+  du clip et du packshot.
 
 Les textes repris de l'ancien site sont conservés **tels quels** (y compris leurs fautes de frappe).

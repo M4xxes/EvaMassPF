@@ -11,12 +11,17 @@ Tout se passe dans l'espace d'administration, depuis ton navigateur.
 ## 1. Se connecter
 
 1. Ouvre l'adresse de ton site suivie de **/admin**
-   (par exemple `https://eva-masson.netlify.app/admin`).
-2. Clique sur **« Se connecter avec GitHub »**.
-3. Saisis ton identifiant et ton mot de passe GitHub (la première fois, GitHub te demande
-   d'**autoriser** l'application : clique sur le bouton vert).
+   (par exemple `https://evamasspf.netlify.app/admin`).
+2. Clique sur **« Se connecter »** : une petite fenêtre s'ouvre.
+   (Si rien ne s'ouvre, autorise les fenêtres pop-up pour ce site dans ton navigateur.)
+3. Saisis ton **code d'accès** puis clique sur **« Se connecter »**. La fenêtre se ferme toute seule.
 4. Tu arrives sur le tableau de bord : à gauche, la liste des **collections**
    (Projets, Catégories, Rôles, Expérience professionnelle, Réglages du site).
+
+Tu restes connectée sur cet ordinateur. Pour te déconnecter (ordinateur partagé, par exemple) :
+clique sur l'icône de profil en haut à droite → **« Déconnexion »**.
+
+> 🔒 Garde ton code d'accès pour toi : toute personne qui le connaît peut modifier le site.
 
 ---
 
@@ -52,10 +57,12 @@ Tout se passe dans l'espace d'administration, depuis ton navigateur.
    - **Durée** (facultatif) : au format `02:25` ;
    - **Miniature** (facultatif) : l'image affichée avant de lancer la vidéo. Si tu la laisses vide,
      c'est l'image de couverture qui est utilisée.
-6. **Liens externes** (facultatif) : un festival, un article, la page d'un partenaire…
-   Clique sur **« Ajouter lien »**, mets un texte (ex. *Sélection officielle*) et l'adresse.
-7. **Mettre en avant sur l'accueil** : coche la case si tu veux que le projet apparaisse
-   dans la « Sélection » de la page d'accueil.
+6. **Liens externes** (facultatif) : un festival, un article, une publication LinkedIn…
+   Clique sur **« Ajouter lien »**, mets un texte court (ex. *Voir la publication*) et l'adresse.
+   Seul le texte est affiché sur le site, jamais l'adresse. Pour un lien LinkedIn ou Instagram,
+   retire la fin de l'adresse qui commence par `?utm_` ou `?xtok` (elle ne sert qu'au suivi).
+7. **Mettre en avant sur l'accueil** : pour choisir les projets de la « Sélection » de l'accueil,
+   utilise plutôt la liste dédiée (voir la partie 4 bis). La case ne sert que si cette liste est vide.
 8. **Ordre d'affichage** : 1 = en premier dans sa catégorie, 2 = ensuite, etc.
 
 Ensuite, enregistre (voir la partie 6 : brouillon ou publication).
@@ -101,13 +108,33 @@ Dans **Réglages du site**, tu peux aussi modifier :
 
 ---
 
+## 4 bis. Choisir la Sélection de l'accueil et ajouter ton CV
+
+1. À gauche : **Réglages du site** → **Accueil et informations générales**.
+2. **Sélection de l'accueil** : clique sur **« Ajouter projet »** et choisis un projet dans la liste.
+   Recommence pour chaque projet. Fais glisser les projets pour changer leur ordre.
+   Choisis **4 ou 8 projets** : la grille de l'accueil fonctionne par groupes de 4.
+3. **CV** : clique sur **« Choisir un fichier »** → **« Téléverser une nouvelle ressource »**
+   et envoie ton CV en **PDF**. Tu peux aussi coller un lien (Canva, Google Drive…) à la place.
+   Dès qu'un CV est renseigné, une entrée **« CV »** apparaît dans le menu, ainsi qu'un bouton
+   « Voir mon CV » sur l'accueil et « Télécharger mon CV » sur les pages À propos et Contact.
+   Pour mettre ton CV à jour, envoie simplement le nouveau PDF à la place de l'ancien.
+4. Enregistre puis publie.
+
+---
+
 ## 5. Les autres collections
 
 - **Catégories** : pour créer une nouvelle catégorie (ex. *Documentaire*). Choisis la rubrique
   (*Projets scolaires* ou *Projets professionnels / personnels*), les rôles affichés sur la carte
   et une image de couverture. Elle apparaît automatiquement sur le site.
   ⚠️ Ne supprime pas une catégorie qui contient encore des projets.
+  Une catégorie sans projet reste cachée sur le site : c'est le cas d'**Audacieux** (ta mission
+  pour l'Audacieux Festival) et de **Stages**, qui apparaîtront dans « Pro / Perso » dès que tu
+  y ajouteras un projet. Pour ces projets, choisis le type **Professionnel** et, pour des formats
+  réseaux sociaux, des vidéos au format **Vertical (9:16)**.
 - **Rôles** : pour ajouter un rôle qui n'existe pas encore (ex. *Cheffe opératrice*).
+  *Cadreuse*, *Régisseuse générale* et *Cheffe de projet* sont déjà disponibles.
   Il sera ensuite proposé dans tous les projets.
 - **Expérience professionnelle** : poste, structure, dates, description, lien.
   La page « Expérience » apparaît dans le menu dès que tu as ajouté la première.
@@ -141,6 +168,7 @@ après la mise à jour.
 
 - **Mon projet n'apparaît pas** : vérifie qu'il est bien **publié** (et pas seulement enregistré),
   puis attends 2–3 minutes et recharge la page du site.
-- **Je ne peux pas me connecter** : vérifie que tu as accepté l'invitation GitHub reçue par email.
+- **Je ne peux pas me connecter** : vérifie le code (majuscules, espaces) et que les fenêtres pop-up
+  sont autorisées pour le site. Si « Code incorrect » persiste, demande le code à jour.
 - **L'image ne s'envoie pas** : elle est peut-être trop lourde ; exporte-la en JPG de moins de 10 Mo.
 - Pour tout le reste : contacte la personne qui gère le site.

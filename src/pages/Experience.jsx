@@ -10,6 +10,14 @@ const fmt = (d) => {
   return date.toLocaleDateString('fr-FR', { month: 'short', year: 'numeric', timeZone: 'UTC' })
 }
 
+/** « sept. 2026 — aujourd'hui », « mars 2025 — avr. 2025 », ou une seule date si début et fin tombent le même mois. */
+const periode = (e) => {
+  if (e.en_cours) return `${fmt(e.debut)} — ${t.en_cours}`
+  const debut = fmt(e.debut)
+  const fin = fmt(e.fin)
+  return !fin || fin === debut ? debut : `${debut} — ${fin}`
+}
+
 /** Expérience professionnelle : frise chronologique (collection « Expérience » du CMS). */
 export default function Experience() {
   return (
@@ -24,7 +32,7 @@ export default function Experience() {
               <Reveal as="li" key={e.slug} delay={i * 60} className="relative pb-14 last:pb-0">
                 <span aria-hidden="true" className="absolute -left-[calc(1.5rem+4.5px)] top-2 h-2 w-2 rounded-full bg-accent md:-left-[calc(2.5rem+4.5px)]" />
                 <p className="label md:absolute md:-left-[13.5rem] md:top-1 md:w-40 md:text-right">
-                  {fmt(e.debut)} — {e.en_cours ? t.en_cours : fmt(e.fin)}
+                  {periode(e)}
                 </p>
                 <h2 className="mt-2 text-[clamp(1.9rem,3.6vw,3rem)] md:mt-0">{e.poste}</h2>
                 <p className="mt-2 text-muted">{e.structure}</p>

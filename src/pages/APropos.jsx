@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import Picture from '../components/media/Picture.jsx'
 import Reveal from '../components/ui/Reveal.jsx'
 import SocialLinks from '../components/ui/SocialLinks.jsx'
+import CvButton from '../components/ui/CvButton.jsx'
 import { aPropos, t, clean } from '../lib/content.js'
 
 /** À propos : photo d'Eva (optionnelle) + bio, éditables dans le CMS. */
@@ -21,6 +22,7 @@ export default function APropos() {
           {clean(aPropos.bio)}
         </Reveal>
         <Reveal delay={240} className="mt-12 flex flex-wrap items-center gap-x-8 gap-y-4">
+          <CvButton action="telecharger" />
           <Link to="/contact" className="label link-underline hover:text-accent">{t.nav_contact} →</Link>
           <SocialLinks className="-ml-2" />
         </Reveal>

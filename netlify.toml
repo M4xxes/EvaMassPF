@@ -7,6 +7,10 @@
 [build.environment]
   NODE_VERSION = "20"
 
+# Fonction de connexion à /admin par code d'accès (variables ADMIN_CODE et GITHUB_TOKEN)
+[functions]
+  directory = "netlify/functions"
+
 # Anciennes adresses du site Adobe Portfolio → nouvelles pages
 # (utile si l'ancien domaine est redirigé vers ce site).
 [[redirects]]
@@ -53,7 +57,7 @@
 # La photographie est sur le site Evastre Photographie
 [[redirects]]
   from = "/photographie"
-  to = "https://evamassonportfolio.netlify.app"
+  to = "https://evastre.netlify.app"
   status = 302
 
 # Fichiers versionnés (nom avec empreinte) : cache navigateur d'un an

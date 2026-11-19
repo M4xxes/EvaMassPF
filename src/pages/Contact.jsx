@@ -1,6 +1,7 @@
 import PageHeader from '../components/ui/PageHeader.jsx'
 import Reveal from '../components/ui/Reveal.jsx'
 import SocialLinks from '../components/ui/SocialLinks.jsx'
+import CvButton from '../components/ui/CvButton.jsx'
 import { site, t, clean } from '../lib/content.js'
 
 /** Contact : email en grand + réseaux sociaux avec leur nom. */
@@ -19,6 +20,9 @@ export default function Contact() {
         )}
         <Reveal delay={120} className="mt-14 border-t border-line pt-8">
           <SocialLinks withLabels iconClass="h-7 w-8" className="-ml-2 gap-x-8 gap-y-3 text-lg" />
+        </Reveal>
+        <Reveal delay={180} className="mt-10">
+          <CvButton action="telecharger" />
         </Reveal>
       </div>
     </>

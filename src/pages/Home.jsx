@@ -4,15 +4,16 @@ import { ArrowDown, ArrowRight } from 'lucide-react'
 import Picture from '../components/media/Picture.jsx'
 import ProjectCard from '../components/project/ProjectCard.jsx'
 import Reveal from '../components/ui/Reveal.jsx'
+import CvButton from '../components/ui/CvButton.jsx'
 import { getFileUrl, getPicture } from '../lib/images.js'
 import { site, t, aPropos, clean, projetsMisEnAvant, categoriesDe, categorieUrl } from '../lib/content.js'
 
 /* Mise en page éditoriale de la sélection : alternance grand / petit formats */
 const layout = [
   { col: 'md:col-span-7', ratio: 'landscape' },
-  { col: 'md:col-span-5 md:mt-40', ratio: 'portrait' },
+  { col: 'md:col-span-5 md:mt-16', ratio: 'portrait' },
   { col: 'md:col-span-5', ratio: 'portrait' },
-  { col: 'md:col-span-7 md:mt-24', ratio: 'landscape' },
+  { col: 'md:col-span-7 md:mt-12', ratio: 'landscape' },
 ]
 
 function Hero() {
@@ -71,12 +72,12 @@ export default function Home() {
       <Hero />
 
       {featured.length > 0 && (
-        <section id="selection" className="container-site scroll-mt-24 pt-24 md:pt-40" aria-labelledby="titre-selection">
-          <div className="mb-12 flex items-end justify-between gap-6 md:mb-20">
+        <section id="selection" className="container-site scroll-mt-24 pt-24" aria-labelledby="titre-selection">
+          <div className="mb-12 flex items-end justify-between gap-6 md:mb-12">
             <Reveal as="h2" id="titre-selection" className="text-[clamp(2.8rem,7vw,6rem)]">{t.titre_selection}</Reveal>
             <Link to="/projets" className="label link-underline mb-3 hover:text-accent">{t.voir_tout} →</Link>
           </div>
-          <ul className="grid gap-x-8 gap-y-16 md:grid-cols-12 md:gap-y-24">
+          <ul className="grid gap-x-8 gap-y-16 md:grid-cols-12 md:gap-y-16">
             {featured.map((p, i) => {
               const l = layout[i % layout.length]
               return (
@@ -86,11 +87,14 @@ export default function Home() {
               )
             })}
           </ul>
+          <Reveal className="mt-16 flex justify-center md:mt-20">
+            <CvButton />
+          </Reveal>
         </section>
       )}
 
       {/* Index des catégories, façon générique de film */}
-      <section className="container-site pt-32 md:pt-48" aria-labelledby="titre-categories">
+      <section className="container-site pt-32" aria-labelledby="titre-categories">
         <Reveal as="h2" id="titre-categories" className="mb-10 text-[clamp(2.8rem,7vw,6rem)]">{t.titre_categories}</Reveal>
         <ul className="border-t border-line">
           {cats.map((c, i) => (

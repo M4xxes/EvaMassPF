@@ -6,8 +6,10 @@
   "image_hero": "/src/content/uploads/accueil/hero-ce-que-la-nuit-n-a-pas-su-prendre.jpg",
   "image_hero_alt": "Plan du court-métrage « Ce que la nuit n'a pas su prendre »",
   "video_hero": "",
+  "selection_accueil": [],
   "lien_photographie": "https://evastre.netlify.app",
   "email_contact": "evastre.prod@gmail.com",
+  "cv": "/src/content/uploads/cv/CV_MASSON_EVA_2026.pdf",
   "textes": {
     "nav_accueil": "Accueil",
     "nav_scolaires": "Projets scolaires",
@@ -55,6 +57,9 @@
     "nouvel_onglet": "(nouvel onglet)",
     "type_scolaire": "Scolaire",
     "type_professionnel": "Professionnel",
-    "type_personnel": "Personnel"
+    "type_personnel": "Personnel",
+    "nav_cv": "CV",
+    "voir_cv": "Voir mon CV",
+    "telecharger_cv": "Télécharger mon CV"
   }
 }

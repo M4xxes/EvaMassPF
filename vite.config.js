@@ -10,4 +10,9 @@ export default defineConfig({
     imagetools({ cache: { enabled: true, dir: './node_modules/.cache/imagetools' } }),
   ],
   server: { port: 5173 },
+  build: {
+    // Le build serveur (pré-rendu) génère les images Open Graph (src/lib/og.js) :
+    // il doit les écrire pour que scripts/prerender.mjs les copie dans dist/assets.
+    ssrEmitAssets: true,
+  },
 })

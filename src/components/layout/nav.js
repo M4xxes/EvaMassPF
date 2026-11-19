@@ -1,6 +1,9 @@
-import { site, t, experiences, clean } from '../../lib/content.js'
+import { site, t, experiences, clean, cvUrl } from '../../lib/content.js'
 
-/** Entrées du menu. « Expérience » n'apparaît que si au moins une expérience existe dans le CMS. */
+/**
+ * Entrées du menu. « Expérience » n'apparaît que si au moins une expérience existe dans le CMS,
+ * « CV » que si un CV est renseigné (il s'ouvre dans un nouvel onglet).
+ */
 export const navItems = () =>
   [
     { to: '/projets', label: t.nav_scolaires },
@@ -9,4 +12,5 @@ export const navItems = () =>
     experiences.length > 0 && { to: '/experience', label: t.nav_experience },
     { to: '/a-propos', label: t.nav_apropos },
     { to: '/contact', label: t.nav_contact },
+    cvUrl() && { href: cvUrl(), label: t.nav_cv },
   ].filter(Boolean)

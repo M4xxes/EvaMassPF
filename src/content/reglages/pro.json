@@ -3,14 +3,9 @@
   "intro": "",
   "liens": [
     {
-      "titre": "Evasive",
-      "description": "Autre version du portfolio",
-      "url": "https://github.com/M4xxes/Evasive"
-    },
-    {
       "titre": "Evastre Photographie",
       "description": "Site photo",
-      "url": "https://evamassonportfolio.netlify.app"
+      "url": "https://evastre.netlify.app"
     }
   ]
 }

@@ -6,6 +6,7 @@
  * sans toucher au code.
  */
 import { marked } from 'marked'
+import { getFileUrl } from './images.js'
 
 // ---------------------------------------------------------------------------
 // Chargement brut
@@ -52,6 +53,16 @@ export const aPropos = aProposData
 export const reseaux = (reseauxData.reseaux || []).filter((r) => clean(r.url))
 export const pro = proData
 
+/**
+ * Lien du CV (Réglages → Accueil → « CV ») : PDF envoyé dans le CMS ou lien externe
+ * (Canva, Drive…). Chaîne vide si aucun CV → les boutons et l'entrée de menu sont masqués.
+ */
+export const cvUrl = () => {
+  const cv = clean(siteData.cv)
+  if (!cv) return ''
+  return /^https?:\/\//.test(cv) ? cv : getFileUrl(cv) || ''
+}
+
 export const categories = categoriesRaw
   .map((c) => ({ ...c, titre: c.nom }))
   .sort(byOrder)
@@ -69,8 +80,8 @@ export const projets = projetsRaw
 
 export const experiences = experiencesRaw
   .filter((e) => clean(e.poste))
-  // Les plus récentes en premier
-  .sort((a, b) => String(b.debut || '').localeCompare(String(a.debut || '')))
+  // Postes en cours d'abord, puis les plus récents
+  .sort((a, b) => !!b.en_cours - !!a.en_cours || String(b.debut || '').localeCompare(String(a.debut || '')))
 
 // ---------------------------------------------------------------------------
 // Requêtes
@@ -89,7 +100,18 @@ export const categoriesDe = (rubrique, { nonVides = false } = {}) =>
     .map((c) => ({ ...c, projets: projetsDe(c.slug) }))
     .filter((c) => !nonVides || c.projets.length > 0)
 
-export const projetsMisEnAvant = () => projets.filter((p) => p.mis_en_avant)
+/**
+ * Projets de la « Sélection » de l'accueil.
+ * Source principale : la liste ordonnée « Sélection de l'accueil » (Réglages → Accueil),
+ * dans l'ordre choisi par Eva ; les projets supprimés depuis sont ignorés.
+ * Si cette liste est vide : ancienne case « Mettre en avant » de chaque projet.
+ */
+export const projetsMisEnAvant = () => {
+  const slugs = (siteData.selection_accueil || []).filter(Boolean)
+  if (slugs.length)
+    return slugs.map((s) => projets.find((p) => p.slug === s)).filter(Boolean)
+  return projets.filter((p) => p.mis_en_avant)
+}
 
 /** Projets pro / perso (quelle que soit leur catégorie). */
 export const projetsProPerso = () => projets.filter((p) => p.type && p.type !== 'scolaire')

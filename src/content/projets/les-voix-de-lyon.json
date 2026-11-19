@@ -1,0 +1,28 @@
+{
+  "titre": "Les Voix de Lyon",
+  "credit": "",
+  "categorie": "interviews-reportage",
+  "type": "scolaire",
+  "date": "",
+  "roles": [
+    "Réalisatrice",
+    "Cadreuse"
+  ],
+  "resume": "TODO: court résumé à fournir",
+  "description": "",
+  "couverture": "/src/content/uploads/interviews-reportage/les-voix-de-lyon.jpg",
+  "galerie": [],
+  "videos": [
+    {
+      "url": "https://www.youtube.com/watch?v=MzucElHrcz8",
+      "titre": "",
+      "miniature": "/src/content/uploads/interviews-reportage/les-voix-de-lyon.jpg",
+      "format": "16:9",
+      "duree": "03:13"
+    }
+  ],
+  "liens": [],
+  "extrait": "",
+  "mis_en_avant": false,
+  "ordre": 4
+}

@@ -9,8 +9,33 @@
   </head>
   <body>
     <!-- Decap CMS : configuration dans config.yml, aperçus dans preview.js -->
+    <script>
+      // Initialisation manuelle : la connexion passe par le code d'accès
+      // (fonction Netlify netlify/functions/auth.mjs) au lieu d'un compte GitHub.
+      window.CMS_MANUAL_INIT = true
+    </script>
     <script src="https://unpkg.com/decap-cms@3.16.3/dist/decap-cms.js"></script>
     <script src="https://unpkg.com/marked@18/lib/marked.umd.js"></script>
     <script src="/admin/preview.js"></script>
+    <script>
+      CMS.init({
+        config: {
+          backend: {
+            // La fenêtre de connexion est servie par ce site lui-même (complète config.yml)
+            base_url: window.location.origin,
+            auth_endpoint: '.netlify/functions/auth',
+          },
+        },
+      })
+
+      // Bouton de connexion : « Se connecter » (pas de mention de GitHub, Eva n'en a pas besoin)
+      new MutationObserver(function () {
+        document.querySelectorAll('button').forEach(function (btn) {
+          if (/GitHub/.test(btn.textContent)) {
+            btn.textContent = 'Se connecter'
+          }
+        })
+      }).observe(document.body, { childList: true, subtree: true })
+    </script>
   </body>
 </html>

@@ -5,8 +5,10 @@
 # =====================================================================
 
 backend:
+  # Connexion par code d'accès : le CMS reçoit le jeton GitHub du site via la fonction
+  # netlify/functions/auth.mjs (base_url / auth_endpoint définis dans admin/index.html).
   name: github
-  repo: TODO_PROPRIETAIRE/TODO_DEPOT   # ← à remplacer, ex. "M4xxes/eva-masson-portfolio" (voir README)
+  repo: M4xxes/EvaMassPF
   branch: main
   commit_messages:
     create: "Ajout : {{collection}} « {{slug}} »"
@@ -167,6 +169,7 @@ collections:
         widget: boolean
         default: false
         required: false
+        hint: "Utilisé seulement si la liste « Sélection de l'accueil » (Réglages du site → Accueil) est vide."
       - { label: Ordre d'affichage, name: ordre, widget: number, value_type: int, default: 10, required: false, hint: "Les plus petits nombres s'affichent en premier (1, 2, 3…)." }
 
   # ===================================================================
@@ -310,8 +313,34 @@ collections:
             required: false
             choose_url: false
             hint: "Facultatif — boucle MP4 muette, courte et légère (moins de 8 Mo). Remplace l'image si elle est renseignée."
+          - label: Sélection de l'accueil
+            name: selection_accueil
+            widget: list
+            required: false
+            min: 4
+            max: 8
+            collapsed: false
+            label_singular: projet
+            hint: >
+              Les projets affichés dans « Sélection » sur l'accueil, dans cet ordre (faites glisser pour réordonner).
+              Choisissez 4 ou 8 projets pour garder le rythme de la grille.
+              Si la liste est vide, ce sont les projets cochés « Mettre en avant » qui s'affichent.
+            field:
+              label: Projet
+              name: projet
+              widget: relation
+              collection: projets
+              value_field: "{{slug}}"
+              search_fields: [titre]
+              display_fields: [titre]
           - { label: Lien du site photo (menu « Photographie »), name: lien_photographie, widget: string, required: false }
           - { label: Email de contact, name: email_contact, widget: string, required: false }
+          - label: CV
+            name: cv
+            widget: file
+            required: false
+            choose_url: true
+            hint: "Envoyez votre CV en PDF, ou collez un lien (Canva, Drive…). Laissez vide pour masquer le bouton et l'entrée « CV » du menu."
           - { label: Description pour Google et les réseaux, name: description_seo, widget: text }
           - { label: Adresse du site (ex. https://evamasson.fr), name: url_site, widget: string, required: false, hint: "Facultatif sur Netlify (détectée automatiquement)." }
           - label: Textes de l'interface
@@ -327,6 +356,9 @@ collections:
               - { label: "Menu — Expérience", name: nav_experience, widget: string }
               - { label: "Menu — À propos", name: nav_apropos, widget: string }
               - { label: "Menu — Contact", name: nav_contact, widget: string }
+              - { label: "Menu — CV", name: nav_cv, widget: string }
+              - { label: "Bouton — Voir mon CV", name: voir_cv, widget: string }
+              - { label: "Bouton — Télécharger mon CV", name: telecharger_cv, widget: string }
               - { label: "Titre — Sélection (accueil)", name: titre_selection, widget: string }
               - { label: "Titre — Projets scolaires", name: titre_categories, widget: string }
               - { label: "Introduction — Projets scolaires", name: intro_scolaires, widget: text, required: false }

@@ -70,6 +70,18 @@ await fs.writeFile(
   `User-agent: *\nDisallow: /admin/\n${origin ? `Sitemap: ${origin}/sitemap.xml\n` : ''}`,
 )
 
+// Images générées uniquement par le build serveur (Open Graph, cf. src/lib/og.js) → site publié.
+const ssrAssets = path.join(ssrDir, 'assets')
+let copied = 0
+for (const file of await fs.readdir(ssrAssets).catch(() => [])) {
+  const target = path.join(dist, 'assets', file)
+  if (!(await fs.stat(target).catch(() => null))) {
+    await fs.copyFile(path.join(ssrAssets, file), target)
+    copied++
+  }
+}
+
 // Le bundle serveur ne sert qu'au build.
 await fs.rm(ssrDir, { recursive: true, force: true })
+console.log(`✓ ${copied} images Open Graph copiées`)
 console.log(`✓ ${routes.length} pages pré-rendues${origin ? ` pour ${origin}` : ' (pas de domaine : sitemap ignoré)'}`)
